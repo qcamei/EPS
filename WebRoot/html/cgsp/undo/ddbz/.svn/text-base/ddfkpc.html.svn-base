@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style2.css"/>
+	</head>
+	<body class="secPage">
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<h1>订单付款批次列表</h1>
+		</header>
+		<div class="second-wrap slide-lr ddpkpc" ng-controller="fkpclb">
+			<div class="ddfkpclb slide-lr-hd">
+				<div class="text-center tit">序号</div>
+				<ol>
+					<li ng-repeat="i in data" ng-class="lastIndex($index)">{{$index+1}}</li>
+				</ol>
+			</div>
+			<div class="xjd-bd slide-lr-bd">
+				<ul>
+					<li ng-repeat="x in data">
+						<table class="fkxxfkxx table table-s2">
+							<tr><td width="32%">订单编号: </td><td ng-bind="x.ddbh"></td></tr>
+							<tr><td>订单名称: </td><td ng-bind="x.ddmc"></td></tr>
+							<tr><td>付款条件: </td><td ng-bind="x.fktj"></td></tr>
+							<tr><td>付款时间: </td><td ng-bind="x.fksj"></td></tr>
+							<tr><td>付款比例: </td><td ng-bind="x.fkbl"></td></tr>
+							<tr><td>付款金额: </td><td ng-bind="x.fkje"></td></tr>
+							<tr><td>是否已付款: </td><td ng-bind="x.sfyfk"></td></tr>
+							<tr><td>支付类别: </td><td ng-bind="x.zflb"></td></tr>
+							<tr><td>操作: </td><td ng-bind="x.cz"></td></tr>
+						</table>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<script src="../../../../resource/js/system/jquery-1.7.2.min.js"></script>
+		<script src="../../../../resource/js/angular.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+		<script>
+		 	//左侧滑动菜单
+			$(function(){
+				$('body').children().on('click','.slide-lr-hd li',function(){
+					var $thisIndex=$(this).index();
+					$(this).addClass('on').siblings().removeClass('on');
+					$('.slide-lr-bd>ul>li').eq($thisIndex).stop().fadeIn(300).siblings().hide();
+				});
+				var t=1;
+				var transLeft=$('.slide-lr-bd').position().left;
+				$('body').children().on('click','.slide-lr-bd',function(){
+					var $this=$(this);
+					$this.css('transition','.2s');
+					if(t){
+						t=0;
+						$this.css('transform','translate3d(-'+transLeft+'px,0,0)');   	
+						$this.css('-webkit-transform','translate3d(-'+transLeft+'px,0,0)');   	
+					}else{
+						t=1;
+						$this.css('transform','translate3d(0,0,0)');   	
+						$this.css('-webkit-transform','translate3d(0,0,0)');   	
+					}
+				});
+			});
+		</script>
+		<script>
+			var app=angular.module("myApp",[]);
+			app.controller('fkpclb',function($scope,$http){
+				$http.get("../../../../resource/data/fkpclb.json").success(function(response){
+					console.log(response);
+					$scope.data=response;
+					$scope.lastIndex=function(index){
+						if(index==response.length-1){
+							$('.slide-lr-hd li').eq(0).addClass('on');
+						}
+					};
+					
+				}).error(function(){
+					
+				})
+			})
+		</script>
+	</body>
+</html>

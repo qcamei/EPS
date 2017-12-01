@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+.nation-base h2{font-size: 1.4rem;font-weight: 800;text-align: center;}
+.txtList1 .text-lemon:link{margin-right:1.6rem;text-decoration: underline;}
+.table{max-width: none;}
+.bg-gray2{background: #eaeaea !important;color: #5b5b5b !important;}
+.cur-p{cursor: pointer;}
+.btn-orange01{display:inline-block;min-width:7rem;height: 2.8rem;line-height:2.9rem;font-size: 1.4rem;color: #fff;text-align: center;border-radius: 6px;background: #ffd600;}
+.btns button:first-child{background: #45cdff;}
+.txtList1 em a{color: #45cdff;}
+/*单选按钮*/
+input.radio[type='radio']{outline:none;display: inline-block;margin:0 3px; width: 14px;height:14px; border:1px solid #c7c7c7;border-radius:50%;background: #fff;}
+/*input.radio[type='radio']:checked{outline:none;background: #ce6202;}*/
+input.radio.check{outline:none;background: #45cdff;}
+/*----------------左侧菜单滑动----------------*/
+.slide-lr{width:100%;overflow-x:hidden;left: 0;bottom: 0;right: 0;}
+.slide-lr .slide-lr-hd,.slide-lr .slide-lr-bd{position: absolute;left: 0;top: 0; z-index:1;width: 100%;}
+.slide-lr .slide-lr-bd{padding:10px 5px; z-index:2;left: 20%;top:0;bottom: 0;right: 0;border-left: 1px solid #f4f4f4; background:#fff ;padding-top: 10px;}
+.slide-lr .slide-lr-hd{width: 20%;}
+.slide-lr .slide-lr-hd .tit{font-size: 1.4rem;line-height: 3rem;color: #666;}
+.slide-lr .slide-lr-hd ol{box-sizing: border-box;}
+.slide-lr .slide-lr-hd ol li{text-align: center;height: 3.4rem;border-bottom: 1px solid #f4f4f4;font-size: 1.3rem;line-height: 3.6rem;color: #333;}
+.slide-lr .slide-lr-hd ol li:first-child{border-top: 1px solid #f4f4f4;}
+.slide-lr .slide-lr-hd ol li.on{background: #ffd600;color: #fff;}
+.slide-lr .slide-lr-bd>ul>li{display: none;}
+.slide-lr .slide-lr-bd>ul>li:first-child{display: block;}
+/*审批*/
+#approval .approveBox,.sub-popups-in{min-height: 22rem;border-radius: 16px;-webkit-border-radius:16px;overflow: hidden;}
+.modal-backdrop.in{opacity: .4 !important;}
+.sub-popups{z-index:1200;}
+.sub-popups-in{position:absolute;padding:0 0 18px;left:50%; top:50%; width: 84%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);background: #fff;border-radius: 16px;overflow: hidden;}
+.sub-popups-in .tit{text-align: center;color:#333;padding-top:1rem;font-size: 1.4rem;}
+
+.sub-next-in .trSelected{background: #ffeed4;}
+.sub-popups-in .btns button{margin: 0 15px;}
+
+.sub-popups-in table{width: 94%;margin: 0 auto 15px;}
+
+.to-back-in .nr{width:94%;margin:0 auto 15px;padding:10px 10px 16px;border: 1px solid #cfcfcf;}
+.to-back-in .nr p em{line-height: 2rem;}
+.to-back-in input.radio{margin: 0 4px;}
+/*修改流程*/
+.change-lc-in .close{top:7px;text-align: center;line-height:3rem;font-size:3rem;color: #f18f2f;opacity: 1;font-weight: normal;}
+.change-lc-in table .tr-zong td{font-size: 1.2rem;}
+.change-lc-in table tr.doing td:nth-child(5){color: #f00;}
+/*---采购文件审批_询价单---*/
+.xjd-wrap .xjd-bd{padding:10px 5px;animation:.4s linear;}
+
+.xjd-bd .tit-1,.tit-1{padding-left:.6rem;height: 3.2rem;line-height: 3.3rem; color: #5b5b5b;font-size: 1.4rem;}
+.xjd-bd .tit-1 span,.tit-1 span{display: inline-block;margin-right: .8rem;}
+.xjd-bd .tit-2{height: 2.4em;line-height: 2.5rem;font-size: 1.2rem;color: #666;}
+.xjd-bd .bfx .th em{display:inline-block;color: #f54647;width: 125%; -webkit-transform: scale(0.8); -webkit-transform-origin: left;}
+.xjd-bd .zhx .th em{color: #f54647;}
+
+/*--------采购公告审批--------*/
+	/*----采购公告审批_采购公告/结果公告审批_结果公告----*/
+.cggsp-cggg .second-wrap .tit-2,.jgggsp-jggg .second-wrap .tit-2{border-bottom: 1px solid #45cdff;}
+.cggsp-cggg .second-wrap .tit-2 span,.jgggsp-jggg .second-wrap .tit-2 span{display:inline-block;font-size:1.4rem;color:#45cdff;line-height:2rem;border-bottom: 2px solid #45cdff;}
+.cggsp-cggg .second-wrap .tit-3,.jgggsp-jggg .second-wrap .tit-3{font-size: 1.4rem;}
+.cggsp-cggg .second-wrap table td,.jgggsp-jggg .second-wrap table td{text-align: left;padding-left: 3px;padding-right: 3px;}
+.cggsp-cggg-qtxx td:nth-child(2n+1){color: #666;background-color: #f5f5f5;}
+.cggsp-cggg .ggsqd .btn-w,.jgggsp-jggg .ggxx .btn-w{text-align: center;}
+.cggsp-cggg .ggsqd .btn,.jgggsp-jggg .ggxx .btn{display: inline-block;padding:0 1rem;border-radius:4px;font-size:1.4rem;line-height: 2.4rem;}
+.cggsp-cggg-dbfa td{text-align: center !important;}
+/*--------订单编制--------*/
+/*--------订单编制_订单付款批次列表--------*/
+.ddpkpc.slide-lr .slide-lr-bd{left: 20%;} 
+.ddpkpc.slide-lr .slide-lr-bd .fkxx p{padding:4px;}
+/*合同支付_合同付款*/
+.htzf-htfkxx .htfkxx table td:nth-child(even){text-align: left;}
+.htzf-htfkxx td .text-lemon{text-decoration: underline;}
+
+/*--------IT设备申请订单业务流程审批_采购需求--------*/
+.itsbsqdd-cgxq .slide-lr .slide-lr-bd{left: 20%;} 
+.itsbsqdd-cgxq .slide-lr .slide-lr-bd p{padding:4px;}
+/*--------电子竞价采购信息--------*/
+.dzjjxx-w .bao-list li h2{position: relative;}
+.dzjjxx-w .bao-list li{border-bottom: 1px solid #fff;}
+.dzjjxx-w .bao-list li h3{position: relative;}
+.dzjjxx-w .bao-list li h3 .arr{position: absolute;right:0;width:3rem;height:100% ;margin:0;transform:rotate(-90deg);transition: transform .1s;background:url(../images/arrow.png) no-repeat center center;background-size:auto 50%;}
+.dzjjxx-w .bao-list li h3 .arr.rotate{transform:rotate(90deg);transition: all .1s;}
+.dzjjxx-w .bao-list li .xq{display: none;}
+.blue-arr-box{position: relative;}
+.blue-arr{position: absolute;right:0;width:3rem;height:100% ;margin:0;transform:rotate(-90deg);transition: transform .1s;background:url(../images/arrow.png) no-repeat center center;background-size:auto 50%;}
+.blue-arr.rotate{transform:rotate(90deg);transition: all .1s;-webkit-transform: rotate(90deg);-webkit-transition: all .1s;}
+/*.dzjjxx-w .bao-list li:last-child .xq{display: block;}
+*/
+/*选项卡样式一*/
+.tabBox01 .hd {border-bottom: 2px solid #45cdff;;}
+.tabBox01 .hd li{font-size: 1.4rem;line-height: 3rem;padding-right:2rem;font-weight: bold;color:#525252;}
+.tabBox01 .hd li.on{color: #45cdff;}
+.tabBox01 .bd li{display: none;}
+

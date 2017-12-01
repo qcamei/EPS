@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<!-- 避免缓存cache -->
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<title>EPS在线</title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style2.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../../resource/css/layer.css" id="layui_layer_skinlayercss"/>
+	</head>
+	<body class="secPage">
+		<header class="SecHeader titSec">
+			<h1>合同基本信息</h1>
+			<span class="pre-header"></span>
+		</header>
+		<div class="second-wrap" ng-controller="htjbxx">
+			<div class="tabBox tabBox01">
+				<ol class="hd clearfix mb-15">
+					<li class="fl on">合同基础信息</li>
+					<li class="fl">查看付款信息</li>
+				</ol>
+				<ul class="bd">
+					<li>
+						<table class="table table-s2">
+							<tr><td class="bg-orange2" colspan="4">基本信息</td></tr>
+							<tr>
+								<td>合同性质：</td>
+								<td ng-bind="jbxx.htxz"></td>
+								<td>是否限额：</td>
+								<td ng-bind="jbxx.sfxe"></td>
+							</tr>
+							<tr>
+								<td>合同名称：</td>
+								<td ng-bind="jbxx.htmc"></td>
+								<td>编号：</td>
+								<td ng-bind="jbxx.bh"></td>
+							</tr>
+							<tr>
+								<td>项目名称：</td>
+								<td ng-bind="jbxx.xmmc"></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>甲方：</td>
+								<td ng-bind="jbxx.jf"></td>
+								<td>乙方：</td>
+								<td ng-bind="jbxx.yf"></td>
+							</tr>
+							<tr>
+								<td>付款方式：</td>
+								<td ng-bind="jbxx.fkfs"></td>
+								<td>金额：</td>
+								<td ng-bind="jbxx.je"></td>
+							</tr>
+							<tr>
+								<td>币种：</td>
+								<td ng-bind="jbxx.bz"></td>
+								<td>付款类型：</td>
+								<td ng-bind="jbxx.fklx"></td>
+							</tr>
+							<tr>
+								<td>合同类别：</td>
+								<td ng-bind="jbxx.htlb"></td>
+								<td>保修期：</td>
+								<td ng-bind="jbxx.bxq"></td>
+							</tr>
+							<tr>
+								<td>开工日期：</td>
+								<td ng-bind="jbxx.kgrq"></td>
+								<td>竣工日期：</td>
+								<td ng-bind="jbxx.jgrq"></td>
+							</tr>
+							<tr>
+								<td>工期：</td>
+								<td ng-bind="jbxx.gq"></td>
+								<td>工程地点：</td>
+								<td ng-bind="jbxx.gcdd"></td>
+							</tr>
+							<tr>
+								<td>终止日期：</td>
+								<td ng-bind="jbxx.zzrq"></td>
+								<td>是否使用模板：</td>
+								<td ng-bind="jbxx.sfsymb"></td>
+							</tr>
+							<tr>
+								<td>乙方经办人：</td>
+								<td ng-bind="jbxx.yfjbr"></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>开户行：</td>
+								<td ng-bind="jbxx.yfjbr"></td>
+								<td>账号：</td>
+								<td ng-bind="jbxx.zh"></td>
+							</tr>
+							<tr>
+								<td>邮政编码：：</td>
+								<td ng-bind="jbxx.yzbm"></td>
+								<td>电话：</td>
+								<td ng-bind="jbxx.dh"></td>
+							</tr>
+							<tr>
+								<td>传真：</td>
+								<td ng-bind="jbxx.cz"></td>
+								<td>电子邮件：</td>
+								<td ng-bind="jbxx.dzyj"></td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						<table class="table">
+							<tr class="tr-grey"><td class="bg-orange2" colspan="{{fkxx[0].length+1}}">查看付款信息</td></tr>
+							<tr>
+								<td>序号</td><td ng-repeat="m in fkxx[0]" ng-bind="m.mc"></td>
+							</tr>
+							<tr ng-repeat="pc in fkxx">
+								<td ng-bind="$index+1"></td><td ng-repeat="n in pc" ng-bind="n.nr"></td>
+							</tr>
+						</table>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--色环加载-->
+	    <div class="loader">
+		    <div class="loaderLayer">
+		        <div class="loader-inner line-spin-fade-loader">
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		        </div>
+		    </div>
+	    </div>
+		<script src="../../../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/angular.min.js"></script>
+		<script src="../../../../resource/js/system/layer.js"></script>
+    	<script src="../../../../resource/js/system/common.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+		<script type="text/javascript">
+			var app = angular.module('myApp', []);
+			app.controller('htjbxx',function($scope,$http){
+				$http.get('htjbxx.json').success(function(data){
+					$('.loader').hide();
+   					iLoadJson.iLoad0=1;//加载成功
+					$scope.data=data;
+					$scope.fkxx=$scope.data.fkxx;
+					$scope.jbxx=$scope.data.jbxx;
+					console.log(data)
+				}).error(function(){
+					$('.loader').hide();
+					layer.alert("加载出错啦")
+				});
+			})
+			$('.loader').hide();
+			tabFn();//选项卡切换
+		</script>
+ 	</body>
+</html>

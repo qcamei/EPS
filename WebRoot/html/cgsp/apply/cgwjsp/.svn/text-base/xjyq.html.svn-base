@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<!-- 避免缓存cache -->
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<title>EPS在线</title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/layer.css" id="layui_layer_skinlayercss" />
+
+	</head>
+	<body class="addPage">
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<h1>我的待办</h1>
+		</header>
+		<div id="pfbz-wrap" class="second-wrap pfbz-wrap">
+			<div class="table-s1-box">
+				<table class="table table-s2" border="0" cellspacing="0" cellpadding="0">
+					<tr class="tr-zong"><td class="tb-title text-center" colspan=2>询价要求</td></tr>
+					<tr>
+						<td width="35%">供应商征集方式</td>
+						<td width="65%">从供应商中选取</td>
+					</tr>
+					<tr>
+						<td width="35%">报名要求及服务说明<br>(供应商可见)</td>
+						<td width="65%">从供应商中选取从供应商中选取从供应商中选取从供应商中选取从供应商中选取</td>
+					</tr>
+					<tr>
+						<td width="35%" class="text-zong">附件列表</td>
+						<td width="65%"><a class="text-lemon" href="">附件xx.pdf</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>	
+		<script src="../../../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/system/common.js"></script>
+		<script src="../../../../resource/js/system/layer.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+	</body>
+</html>

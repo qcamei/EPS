@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style2.css"/>
+	</head>
+	<body class="bg-white">
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<span class="home-btn"></span>
+			<h1>电子竞价采购信息</h1>
+		</header>
+		<div id="xjd-wrap" class="second-wrap slide-lr" ng-controller="dzjjxx">
+			<div class="dzjjxx-w">
+				<ul class="bao-list">
+					<li ng-repeat="x in data.bxx" ng-class="lastIndex($index)">
+						<h2 class="tit-1 bg-orange2">
+							<span>包号：<em>{{x.bmc}}</em></span>
+							<span class="arr"></span>
+						</h2>
+						<div class="xq">
+							<table class="table table-s1" >
+								<tr class="tr-grey">
+									<td>包描述</td>
+									<td>商品数量</td>
+									<td>起拍价（元）</td>
+									<td>最低限价（元）</td>
+								</tr>
+								<tr>
+									<td>{{x.bms}}</td>
+									<td>{{x.spsl}}</td>
+									<td>{{x.qpj}}</td>
+									<td>{{x.zdj}}</td>
+								</tr>
+							</table>
+							<table class="table table-s1">
+								<!--<tr class="tr-grey">
+									<td>商品名称</td>
+									<td>品牌</td>
+									<td>型号</td>
+									<td>数量</td>
+									<td>单位</td>
+									<td>起拍单价<br>（元）</td>
+									<td>商品类型</td>
+								</tr>-->
+								<tr class="tr-grey">
+									<td ng-repeat="q in x.spxq.sx">{{q}}</td>
+								</tr>
+								<tr ng-repeat="m in x.spxq.csz">
+									<td ng-repeat="i in m">{{i}}</td>
+								</tr>
+							</table>
+						</div>
+					</li>
+				</ul>
+				<table class="table table-s1" >
+					<tr class="tr-zong">
+						<td colspan="4" class="text-left pl-10">已邀请供应商</td>
+					</tr>
+					<tr class="tr-grey">
+						<td width="">序号</td>
+						<td width-"">供应商名称</td>
+						<td width-"">组织机构代码证号</td>
+					</tr>
+					<tr ng-repeat="x in data.gys">
+						<td>{{$index}}</td>
+						<td>{{x.gysmc}}</td>
+						<td>{{x.jgdm}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	
+		<script src="../../../../resource/js/system/jquery-1.7.2.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/angular.min.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+		<script>
+			 	//左侧滑动菜单
+				$(function(){
+					$oBody.on('click','.dzjjxx-w .bao-list li .tit-1',function(e){
+						$(this).siblings('.xq').stop().slideToggle(200);
+						$(this).find('.arr').toggleClass('rotate');
+						e.stopPropagation();
+						return false;
+					})
+
+				});
+				var app=angular.module('myApp',[]);
+				app.controller('dzjjxx',function($scope,$http){
+					$http.get("../../../../resource/data/dzjjcgxx.json").success(function(data){
+						console.log(data);
+						$scope.data=data;
+						$scope.lastIndex=function(index){
+							if(index==$scope.data.bxx.length-1){
+								$('.dzjjxx-w .bao-list li:last-child h2 .arr').addClass('rotate');
+							}
+						};
+
+					})
+				})
+		</script>
+	</body>
+</html>

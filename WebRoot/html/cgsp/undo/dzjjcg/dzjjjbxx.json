@@ -1,0 +1,44 @@
+{
+	"jbxx":{
+		"xmbh":"HKKLLJJ789909",
+		"xmmc":"柳暗花明又一村",
+		"cgfs":"竞争性报价",
+		"cglb":"工程",
+		"xmfzr":"张欣"
+	},
+	"xmxq":{
+	},
+	"xjyq":{
+		"gyszjfs":"点的",
+		"bmyqfwsm":"很有意见和建议",
+		"fj":		[
+			{
+			"ID":"8a01c88b55b0fb32015600f8da5f0dd8",
+			"PATH":{
+				"flag":"success",
+				"list":[
+					"http://oafile.taikang.com/doctrans/dtImg/fromoafile/eps_accessory/2016/07/25/c7f4699396a24171a12dea56fa0e1a6c1469432914020_d69bf44712b8408b9d6fe6b4d6f6ae16.jpg",
+					"http://oafile.taikang.com/doctrans/dtImg/fromoafile/eps_accessory/2016/07/25/c7f4699396a24171a12dea56fa0e1a6c1469432914020_0e2cdd019ff547938269d8e05f3f31c6.jpg"
+					],
+				"msg":"success"
+				},
+			"REALNAME":"c7f4699396a24171a12dea56fa0e1a6c.pdf",
+			"SHOWNAME":"11韩利娜报办公设备维修640.pdf"
+			},
+			{
+			"ID":"8a01c88b55b0fb32015600f8da5f0dd8",
+			"PATH":{
+				"flag":"success",
+				"list":[
+					"http://oafile.taikang.com/doctrans/dtImg/fromoafile/eps_accessory/2016/07/25/c7f4699396a24171a12dea56fa0e1a6c1469432914020_d69bf44712b8408b9d6fe6b4d6f6ae16.jpg",
+					"http://oafile.taikang.com/doctrans/dtImg/fromoafile/eps_accessory/2016/07/25/c7f4699396a24171a12dea56fa0e1a6c1469432914020_0e2cdd019ff547938269d8e05f3f31c6.jpg"
+					],
+				"msg":"success"
+				},
+			"REALNAME":"c7f4699396a24171a12dea56fa0e1a6c.pdf",
+			"SHOWNAME":"22韩利娜报办公设备维修640.pdf"
+			}
+		]
+
+	}
+}

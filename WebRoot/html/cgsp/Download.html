@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="GBK">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport"  id="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <title>文件下载</title>
+    <link rel="stylesheet" type="text/css" href="../../resource/css/common.css" />
+    <style>
+    	.bg{display:none;position: fixed;z-index:9999;left: 0;right: 0;top: 0;bottom: 0;
+    	  	background: url(../../resource/images/tishi.png) no-repeat top right;
+    		  background-size:90% auto;
+    		  background-color: rgba(0,0,0,0.6);
+    	 	}
+    	 	#download{color: #fff;font-size: 1.6rem;;}
+    </style>
+   </head>
+  <body class="ng-cloak">
+  	<div class="bg"></div>
+    <header class="SecHeader titSec" ng-controller="JsonController">
+      <h1 >
+        <a ng-repeat="fj in fjs" class="cgwj" ng-click="downLoad()" ng-href="{{localUrl}}/download.svc?file=d:/webfile/{{fj.PATH}}{{fj.REALNAME}}&filename={{enshowname}}&encode=true"><i id="download">查看文件【{{fj.SHOWNAME}}】</i></a>
+      </h1>
+    </header>
+  </body>
+   <script src="../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../resource/js/system/fastclick.js"></script>
+		<script type="text/javascript" src="../../resource/js/base64.js"></script>
+    <script type="text/javascript" src="../../resource/js/angular.min.js"></script>
+    <script type="text/javascript" src="../../resource/js/publicDo.js"></script>
+    <script src="../../resource/js/system/common.js"></script>
+  <script type="text/javascript">
+  var b=new Base64();
+  		 /* 打开下载页的分享权限。如果是屏蔽 把‘showOptionMenu’改成‘hideOptionMenu’ */
+			function onBridgeReady(){
+				WeixinJSBridge.call('showOptionMenu');
+			}
+			
+			if (typeof WeixinJSBridge == "undefined"){
+			    if( document.addEventListener ){
+			        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+			    }else if (document.attachEvent){
+			        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+			        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+			    }
+			}else{
+			    onBridgeReady();
+			}
+      /* 我的代办列表数据处理 */
+       var localUrl=connectPath;
+     	var app = angular.module('myApp', []);
+		app.controller('JsonController',function($scope,$http,$location,$window){
+        var fjid=$location.search().fjid;
+        var browserFlag="";
+        var ua = navigator.userAgent.toLowerCase();
+       //alert(fjid)
+        //附件列表
+        $scope.localUrl=localUrl;
+        fjUrl =localUrl+"/jsonDataCtrl/getFj.do?callback=JSON_CALLBACK"+"&fjid="+fjid;//"/wddbControl/getWddb.do?method=getFj&callback=JSON_CALLBACK"+"&fjid="+fjid;
+        $http.jsonp(fjUrl).success(function(data){
+          $scope.fjs = data;
+          console.log(data);
+          var enshowname=b.encode(data[0].SHOWNAME);
+          $scope.enshowname =enshowname;
+          //加载效果去除
+          $('.loader').fadeOut();
+			      var i=0;
+			      //下载提示
+			      $scope.downLoad= function(){
+      			$('.bg').show();
+//    			window.Location.href=localUrl+'/download.svc?file=/home/wasadmin/webfile/'+fj.PATH+fj.REALNAME; 
+//			        if(i>0){//防止多次提示
+//			          var browserFlag="";
+//			          var ua = navigator.userAgent.toLowerCase();
+//			          if(ua.match(/MicroMessenger/i)=="micromessenger") {
+//			              browserFlag="WEIXIN";
+//			              alert("此浏览器不支持在线下载，请用其他浏览器打开下载！");
+//			              return false;
+//			          } else if(ua.match(/mqqbrowser/i)=="mqqbrowser"){
+//			            browserFlag="QQ";
+//			            alert("此浏览器不支持在线下载，请用其他浏览器打开下载！");
+//			            return false;
+//			          }else{
+//			            browserFlag="QT";
+//			          }
+//			        }
+//			        i++;
+			      }
+      });
+
+     })
+
+   </script>
+</html>

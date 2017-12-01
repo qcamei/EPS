@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title>采购审批-待办</title>
+		<link rel="stylesheet" type="text/css" href="../../../../resource/bootstrap/bootstrap.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../../../resource/css/style.css"/>
+        <link rel="stylesheet" href="../../../../resource/css/style2.css"/>
+        <link rel="stylesheet" type="text/css" href="../../../../resource/css/layer.css" id="layui_layer_skinlayercss"/>
+	</head>
+	<body class="tailPage">
+		<div ng-view></div>
+			
+	</body>
+
+	<script src="../../../../resource/js/system/jquery-2.2.0.min.js"></script>
+	<script src="../../../../resource/js/publicDo.js"></script>
+	<script src="../../../../resource/js/system/fastclick.js"></script>
+	<script src="../../../../resource/js/system/angular.min.js"></script>
+	<script src="../../../../resource/js/system/angular-route.min.js"></script>
+	<script src="../../../../resource/js/system/layer.js"></script>
+	<script src="../../../../resource/js/system/common.js"></script>
+	<script>
+		var app=angular.module('myApp',['ngRoute']);
+		app.config(function($routeProvider){
+			$routeProvider.
+			when('/',{
+				controller: 'xtspController',
+		        templateUrl:'base.html'
+			}).
+			when('/xtdd',{
+//				controller:'',
+				templateUrl:'xtdd.html'
+			}).
+			when('/xjyq',{
+//				controller:'',
+				templateUrl:'xjyq.html'
+			}).
+			when('/ddmx',{
+//				controller:'',
+				templateUrl:'ddmx.html'
+			}).
+			when('/ckfp',{
+//				controller:'',
+				templateUrl:'ckfp.html'
+			}).	
+			otherwise({
+				redirectTo: '/'
+			});
+		});
+	</script>
+		
+</html>

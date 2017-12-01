@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../../../resource/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../../resource/css/style2.css" />
+	</head>
+	<body class="addPage">
+		<header class="addHeader">
+			<span class="pre-header" onclick="window.close()"></span>
+			<h1>加签</h1>
+		</header>
+		<div id="add" class="addBox">
+			<form action="" method="">
+				<div class="sortStyle">
+					<span><input class="radio" checked="" type="radio" name="sort" id="sort" value="顺序提交" />顺序提交</span>
+					<span><input class="radio" type="radio" name="sort" id="unsort" value="同时提交" />同时提交</span>
+				</div>
+				<div class="members-w clearfix">
+					<div class="box fl">
+						<h4>待选：<em>（点击选择）</em></h4>
+						<div class="members membersL">
+							<span>1李小斌</span>
+							<span>2李小斌</span>
+							<span>3李小斌</span>
+							<span>4李小斌</span>
+							<span>5李小斌</span>
+							<span>6李小斌</span>
+							<span>7李小斌</span>
+							<span>8李小斌</span>
+						</div>
+					</div>
+					<div class="box fr">
+						<h4>已选：<em>（点击删除）</em></h4>
+						<div class="members membersR">
+						</div>
+					</div>
+				</div>
+				<button class="addSubBtn" onclick="window.close()">确认提交</button>
+			</form>
+		</div>
+<!------------------------------------------------------------------->		
+		<script src="../../../../resource/js/system/jquery-1.7.2.min.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+		<script>
+			$(function(){
+				var $link='';
+				var $close='<em>×</em>';
+				$(document).on('click','.membersL span',function(){
+					var $this=$(this);
+					$link=$(this).clone().append($close);
+					$this.remove();
+					$link.appendTo($('.membersR'));
+					console.log($link.html())
+					console.log($('.membersR span').length)
+				});
+				$(document).on('click','.membersR span',function(){				
+					var $this=$(this);
+					$link=$(this).clone();
+					//console.log($link.html())
+					//alert($link.children('em').html());
+					$link.children('em').remove();
+					//console.log($link.html())
+					$this.remove();
+					$link.appendTo($('.membersL'));
+				});
+			});
+		</script>
+		
+	</body>
+</html>

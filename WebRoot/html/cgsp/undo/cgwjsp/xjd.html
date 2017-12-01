@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<!-- 避免缓存cache -->
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<title>EPS在线</title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style2.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/layer.css" id="layui_layer_skinlayercss" />
+	</head>
+	<body class="secPage">
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<h1>询价单</h1>
+		</header>
+		<div id="xjd-wrap" class="second-wrap xjd-wrap slide-lr" ng-controller="xjd">
+			<div class="xjd-hd slide-lr-hd">
+				<ol>
+					<li ng-repeat="x in data" ng-class="lastIndex($index)">包:{{x.bh}}</li>
+				</ol>
+			</div>
+			<div class="xjd-bd slide-lr-bd">
+				<ul>
+					<li ng-repeat="x in data">
+						<h2 class="tit-1 text-center bg-orange2">
+							<span>包号：<em>{{x.bh}}</em></span>
+							<span>包名称：<em>{{x.bmc}}</em></span>
+							<span>本包询价综合要求<em></em></span>
+						</h2>
+						<div id="bfx" ng-repeat="f in x.bfx">
+							<h3 class="tit-2 mt-10 pl-10 text-left bg-gray2">包分项：{{f.bfxmc}}</h3>
+							<table class="bfx table mt-5 ellipTable row2eTable">
+								<tr class="th tr-grey">
+									<td ng-repeat="n in f.bxq.mc track by $index">{{n}}</td>
+								</tr>
+								<tr class="tr-grey">
+									<td class="text-red" ng-repeat="n in f.bxq.mm track by $index">{{n}}</td>
+								</tr>
+								<tr ng-repeat="n in f.bxq.nr" ng-if="nrFlag(n)" ng-class="tbLength(n)">
+										<td ng-repeat="x in n track by $index" ><em><span>{{x}}</span><i>...</i></em></td>
+									<!--<td ng-repeat="n in f.bxq">{{n.nr[0]}}<em><span></span><i>...</i></em></td>-->
+								</tr>
+							</table>
+							<table class="zhx table mt-10 mb-20 table-s2">
+								<tr class="th">
+									<td class="bg-gray2" colspan="2">综合项<em>(卖方输入)</em></td>
+								</tr>
+								<tr ng-repeat="d in f.zhx">
+									<td width="30%" ng-bind="d.mc"></td>
+									<td ng-bind="d.nr"></td>
+								</tr>
+							</table>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<!--色环加载-->
+	    <div class="loader">
+		    <div class="loaderLayer">
+		        <div class="loader-inner line-spin-fade-loader">
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		        </div>
+		    </div>
+	    </div>
+		<script src="../../../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../../../resource/js/angular.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/system/layer.js"></script>
+		<script src="../../../../resource/js/system/common.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+		<script>
+		 	//左侧滑动菜单
+			$(function(){
+				$('body').children().on('click','.slide-lr-hd li',function(){
+					var $thisIndex=$(this).index();
+					$(this).addClass('on').siblings().removeClass('on');
+					$('.slide-lr-bd>ul>li').eq($thisIndex).show().siblings().hide();
+					ellip();
+				});
+				var t=1;
+				var transLeft=$('.slide-lr-bd').position().left;
+				$('body').children().on('click','.slide-lr-bd',function(){
+					var $this=$(this);
+					$this.css('transition','.2s');
+					if(t){
+						t=0;
+						$this.css('transform','translate3d(-'+transLeft+'px,0,0)');   	
+						$this.css('-webkit-transform','translate3d(-'+transLeft+'px,0,0)');   	
+					}else{
+						t=1;
+						$this.css('transform','translate3d(0,0,0)');   	
+						$this.css('-webkit-transform','translate3d(0,0,0)');   	
+					}
+				});
+			});
+		</script>
+		<script>
+			var app = angular.module('myApp', []);
+			var ywbh = sessionStorage.getItem("ywbh");
+			URL=connectPath+'/jsonDataCtrl/showCgwjxjd.do?callback=JSON_CALLBACK&xmid='+ywbh;
+			//console.log(URL)
+			app.controller('xjd',function($scope, $http){
+			$http.jsonp(URL).success(function(response){
+//			app.controller('xjd',function($scope, $http){
+//			$http.get("cgwjxjd.json").success(function(response){
+					console.log(response)
+					$('.loader').hide();
+   					iLoadJson.iLoad0=1;//加载成功
+					$scope.data=response;
+					$scope.ngclassa=function(nr){
+						console.log(nr.length)
+						return nr;
+					}
+					$scope.nrFn=function(index){return true};
+					$scope.nrFlag=function(nr){
+						var flag=true;
+						for(var i=0;i<nr.length;i++){
+							if(nr[i]==""){
+								flag=false;
+							}else if(nr[i]){
+								flag=true;
+								break;
+							}else{
+								flag=false;
+							}
+						}
+						return flag;
+					};
+					$scope.lastIndex=function(index){
+						if(index==response.length-1){
+							$('.slide-lr-hd li').eq(0).addClass('on');
+							ellip();//溢出显示省略号
+							
+							/*							 
+							 *判断如果表格列数过宽，就提示区PC端查看
+							 * 如果分辨率在320-375间，表格列数超过12列，则提示去PC端
+							 * 如果分辨率在375-420间，表格列数超过14列，则提示去PC端
+							 * 如果分辨率在421-500间，表格列数超过16列，则提示去PC端
+							 * 如果分表格列数超过17列，则提示去PC端查看
+							 */
+							$scope.tbLength=function(line){
+								var tabL=0;
+								tabL=line.length;
+								if(screen.width<375&&tabL>12){
+									layer.alert("表格列数过多，可能显示不完整，建议到PC端查看！");
+								}else if(screen.width<420&&tabL>14){
+									layer.alert("表格列数过多，可能显示不完整，建议到PC端查看！");
+								}else if(screen.width<500&&tabL>16){
+									layer.alert("表格列数过多，可能显示不完整，建议到PC端查看！");
+								}else if(screen.width<560&&tabL>18){
+									layer.alert("表格列数过多，可能显示不完整，建议到PC端查看！");
+								}
+								return;
+							};
+						}
+					};
+					
+				}).error(function(){
+					$('.loader').hide();
+					layer.alert("加载出错啦")
+				});
+			});
+
+		</script>
+	</body>
+</html>

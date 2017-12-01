@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<!-- 避免缓存cache -->
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<title>EPS在线</title>
+		<link rel="stylesheet" type="text/css" href="../../../resource/css/swiper.min.css"/>
+		<link rel="stylesheet" href="../../../resource/css/common.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../../resource/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../resource/css/style2.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../resource/css/pbStyle.css" />
+		<link rel="stylesheet" type="text/css" href="../../../resource/css/layer.css" id="layui_layer_skinlayercss"/>
+	</head>
+	<body>
+		<header class="main-header">
+			<span class="pre-header"></span>			
+			<span class="home-btn"></span>
+			<h1>评标</h1>
+		</header>
+		<section class="xmxxW pb-container"> 
+			<div class="style-nation pb-style-nation mb-30">
+				<ol class="clearfix">
+					<li class="on">商务项评分</li>
+					<li>评分汇总</li>
+				</ol>
+				<ul>
+					<li class="on">
+						<div class="pb-box">
+							<table class="table mt-20 end-box">
+								<tr class="tr-grey">
+									<td>
+										<div class="fl pl-5">包1</div>
+										<div class="jdt-box fr mt-5" style="width: 79%;">
+											<div class="jdt end-jdt">
+											   <div class="jdt-inner" style="width: 100%;"></div>
+											</div>
+											<div>100%</div>
+										</div>
+									</td>
+									<td width="26%">专家: <span>张晓明</span></td>
+									<td width="31%">第一页,共一页</td>
+								</tr>		
+							</table>
+							<table class="table">
+								<tr>
+									<td rowspan="2">投标人</td>
+									<td colspan="6">项目</td>
+								</tr>
+								<tr>
+									<td>商务(66分)</td>
+									<td>注册资金(20分)</td>
+									<td>资质(16分)</td>
+									<td>影响力(0-20分)</td>
+									<td>现金流(10分)</td>
+									<td>小计(分)</td>
+								</tr>
+								<tr>
+									<td><p>上海中科软</p><p><a class="text-orange" href="#">查看文件投标</a></p></td>
+									<td>-</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>15</td>
+								</tr>
+								<tr>
+									<td><p>瑞友科技</p><p><a class="text-orange" href="#">查看文件投标</a></p></td>
+									<td>-</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td><p>华尔金融</p><p><a class="text-orange" href="#">查看文件投标</a></p></td>
+									<td>-</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>
+										<p>5分</p>
+										<p>评分说明:</p>
+										<p>11</p>
+									</td>
+									<td>19</td>
+								</tr>				
+							</table>
+							<p class="text-red mt-20">提示:当评分小于当前类别总分2/3的请录入评分说明</p>
+						</div>
+						
+					</li>
+					<li>
+						<table class="table mt-20 mb-20">
+							<tr class="tr-orange">
+								<td>评审专家</td>
+								<td>商务项评分评审进度</td>
+								<td>是否提交评分结果</td>
+							</tr>	
+							<tr>
+								<td>李虎</td>
+								<td>
+									<div class="jdt-box">
+										<div class="jdt">
+										   <div class="jdt-inner" style="width: 90%;"></div>
+										</div>
+										<div>90%</div>
+									</div>
+									
+								</td>
+								<td>未完成</td>
+							</tr>
+							<tr>
+								<td>王木兰</td>
+								<td>
+									<div class="jdt-box">
+										<div class="jdt">
+										   <div class="jdt-inner" style="width: 40%;"></div>
+										</div>
+										<div>40%</div>
+									</div>
+									
+								</td>
+								<td>未完成</td>
+							</tr>
+							<tr>
+								<td>张晓明</td>
+								<td>
+									<div class="jdt-box">
+										<div class="jdt">
+										   <div class="jdt-inner" style="width: 100%;"></div>
+										</div>
+										<div>100%</div>
+									</div>
+									
+								</td>
+								<td>已完成</td>
+							</tr>
+							<tr>
+								<td>邓尔</td>
+								<td>
+									<div class="jdt-box">
+										<div class="jdt">
+										   <div class="jdt-inner" style="width: 0%;"></div>
+										</div>
+										<div>0%</div>
+									</div>
+									
+								</td>
+								<td>已完成</td>
+							</tr>
+						</table>
+
+					</li>
+				</ul>
+			</div>
+		</section>
+		</div>
+		<!--色环加载-->
+	    <div class="loader loaderLayer" style="bottom: auto;display: none;">
+	        <div class="loader-inner line-spin-fade-loader">
+	          <div></div>
+	          <div></div>
+	          <div></div>
+	          <div></div>
+	          <div></div>
+	          <div></div>
+	          <div></div>
+	          <div></div>
+	        </div>
+	    </div>
+		<script src="../../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../resource/js/system/swiper.min.js"></script>
+		<script src="../../../resource/js/system/angular.min.js"></script>
+		<script src="../../../resource/js/system/layer.js"></script>
+		<script src="../../../resource/js/pbJs/pbCommon.js"></script>
+		<script src="../../../resource/js/pbJs/pbbase.js"></script>
+	</body>
+</html>

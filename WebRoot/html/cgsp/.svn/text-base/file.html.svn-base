@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width,initial-scale=1.0" name="viewport"  id="viewport">		<meta name="format-detection" content="telephone=no">
+		<!-- 避免缓存cache -->
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<title>EPS在线</title>
+		<link rel="stylesheet" href="../../resource/css/common.css" type="text/css" />
+		<style>
+			body,html{overflow:initial !important;}
+			img{ width:100%; height:auto; border:0;background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAWCAYAAAB5VTpOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZEQkQ3NDZFOEYxNzExRTQ5NUZCRjQzMkM2RTA1RTJEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZEQkQ3NDZGOEYxNzExRTQ5NUZCRjQzMkM2RTA1RTJEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkRCRDc0NkM4RjE3MTFFNDk1RkJGNDMyQzZFMDVFMkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkRCRDc0NkQ4RjE3MTFFNDk1RkJGNDMyQzZFMDVFMkQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5hmE5XAAACP0lEQVR42uxYy3HCMBA1DPe4g5AKYiqwUwF0YHPiSirAVAA5copLIBUgOnAJTgemAkeaeZq8ESvGgJPh4J3ZsbQyq9XT/sygaZqgp18a9ID0gPSA3AXIYrGww63mUnNxh36leQk9hjLNkeZc85jkbfQUd9pyRrvd7kw2uvC+Mby+YZ+ExjHmIeZj6DUgrTTPWx4yBih/ThIgY3CIpz1gjRuVYuyNDM6dtYyA5XeM7k+s7R8lZCRAMtyeoVfNKcZHAued3P1wwUMaeIMEVgYde8crtx5bM0d3gN8vuwRkKMiM0QMAsMZ4LRiiBDfOAUJDnnSg+Qrub+cbPO1BQ6xXpN/uIcmi//CQeygnL1A4RObc8tbJKZWgp3DAXmGeO3sljw4I54kYB+aDmfB4otAy3vPiAeVhcggn11toixv+QsKshNCypffoASPy2JN0YN/NgDxT4rwmVhN4QSFUnJLcPUZ1kmgjyFJK8AEl+k5p6JHPKJEFFPNt6Yjsb281p1Jr1qaaPwTPqbE+QTK3HFCCtzy/orHrBJDvGzdcAoSEwiWn8hpSaFkQIvKgpOW+hVByXVmIfRMnHPe+kBt6YjWlDjIC820enNLK4cJl1/YxOSqMgv4TZBEl2S4odQCJ4I2Zc9lTX4UaeZA/Ua9hjebk52vMFOUF23QpPAsqwxG61Bnt1QVNnM8NBVnllGvl+xSQAKmpu7SeUZPHrHHAiuaVUHaZKuoq7SdA6fQtXVDZUqb6z//+/5AekB6Qv6AfAQYAZXq9jhikZ9kAAAAASUVORK5CYII=') no-repeat center #ccc;background-size: 40% auto;}
+			.imgBox{margin-top: 4.2rem;}
+		</style>
+	</head>
+	<body>
+		<header class="main-header">
+			<span class="pre-header index-pre"></span>
+			<h1 class="text-center">文档查看</h1>
+		</header>
+		<ul class="imgBox"></ul>
+		<script src="../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../resource/js/system/echo.min.js"></script>
+		<script>
+		//每次请求listL张，
+		//当浏览器高度等于加载完图片高度-mg.height*2,继续请求listL张。
+		$(function(){
+			$('.pre-header').click(function(){
+				window.history.back(-1);
+			});	
+			var fileimg=sessionStorage.getItem('fileimg');
+			fileimg=JSON.parse(fileimg);
+			var init=0;//初始化图片每次从第几张开始请求
+			var listL=5;//每次请求图片张数
+			mg(fileimg);
+			function mg(arrUrl){
+				console.log(arrUrl);
+				function mgload(start){
+					var length=start+listL;
+					if(length>arrUrl.length){
+						length=arrUrl.length;
+					}
+					for(var i=start;i<length;i++){
+						var $mgLi=$('<li><img src="images/blank.gif" data-echo="'+arrUrl[i]+'" /></li>');
+						$('.imgBox').append($mgLi);
+						//alert(i)
+						if(i==length-1){
+							echo.init();
+							init=length;
+						}
+					}
+				}
+				mgload(0);
+				$(window).scroll(function(){
+					var docHeight=$(document).height();
+					var scrollHeight=$(document).scrollTop();
+					var winHeight=$(window).height();
+					var disH=$('li').height()*2;
+					if(scrollHeight+winHeight+disH>docHeight && init<arrUrl.length){
+						mgload(init);
+					}
+				})
+				
+			}
+	
+		})
+		    
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../../../resource/css/style.css"/>
+
+	</head>
+	<body class="addPage">
+		<header class="addHeader">
+			<span class="pre-header"></span>
+			<h1>询价要求</h1>
+		</header>
+		<div id="pfbz-wrap" class="second-wrap pfbz-wrap">
+			<div class="table-s1-box">
+				<table class="table" border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="tb-title text-center" colspan=2>询价要求</td></tr>
+					<tr>
+						<td width="35%">供应商征集方式</td>
+						<td width="65%">从供应商中选取</td>
+					</tr>
+					<tr>
+						<td width="35%">报名要求及服务说明<br>(供应商可见)</td>
+						<td width="65%">从供应商中选取从供应商中选取从供应商中选取从供应商中选取从供应商中选取</td>
+					</tr>
+					<tr>
+						<td width="35%" class="text-zong">附件列表</td>
+						<td width="65%"><a class="text-lemon" href="">附件xx.pdf</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>	
+		<script src="../../../../resource/js/system/jquery-1.7.2.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+	</body>
+</html>

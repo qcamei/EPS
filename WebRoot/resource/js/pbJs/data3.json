@@ -1,0 +1,42 @@
+{
+	"bh":"111",
+	"bmc":"包1",
+	"percent":100,
+	"zj":"张晓明",
+	"company":[
+				{"companyName":"中科软","id":1,"value":[
+					{"scope":5,"reason":"分数低"},
+					{"scope":7,"reason":""},
+					{"scope":9,"reason":"1111"},
+					{"scope":8,"reason":"分数低"}
+				]},
+				{"companyName":"瑞友科技","id":2,"value":[
+					{"scope":6,"reason":"荣誉少"},
+					{"scope":4,"reason":"22222222"},
+					{"scope":3,"reason":""},
+					{"scope":5,"reason":"bbbbbbb"}
+				]}	
+			],
+	"pfbz":
+		[
+			{
+				"title":"注册资金",
+				"score":20
+				
+			},
+			{
+				"title":"公司资质",
+				"score":16
+			},
+			{
+				"title":"影响力",
+				"score":"0-20"
+			},
+			{
+				"title":"等级",
+				"score":10
+			}
+		]
+}
+
+		

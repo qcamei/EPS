@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style.css"/>
+
+	</head>
+	<body>
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<span class="home-btn"></span>
+			<h1>协同订单基本信息</h1>
+		</header>
+		<div id="xjd-wrap" class="second-wrap xjd-wrap">
+            <div class="table-s1-box">
+				<table class="table table-s2" >
+					<tr class="tr-zong">
+						<td colspan="2" class="text-left pl-10">采购订单行信息</td>
+					</tr>
+					<tr>
+						<td width="30%">采购订单号</td>
+						<td>113455555</td>
+					</tr>
+					<tr>
+						<td>订单行号</td>
+						<td>113455555</td>
+					</tr>
+					<tr>
+						<td>物料号</td>
+						<td>113455555</td>
+					</tr>
+					<tr>
+						<td>物料名称</td>
+						<td>泰康人寿深圳分公司</td>
+					</tr>
+					<tr>
+						<td>订单数量</td>
+						<td>113455555</td>
+					</tr>
+					<tr>
+						<td>净价</td>
+						<td>113455555</td>
+					</tr>
+					<tr>
+						<td>工厂号</td>
+						<td>113455555</td>
+					</tr>
+					<tr>
+						<td>工厂名称</td>
+						<td>泰康人寿深圳分公司</td>
+					</tr>
+					<tr>
+						<td>发票金额</td>
+						<td>113455555</td>
+					</tr>
+					<tr>
+						<td>发票附件</td>
+						<td><a class="text-zong" href="ckfp.html">查看发票</a></td>
+					</tr>
+					<tr>
+						<td>采购订单号</td>
+						<td>113455555</td>
+					</tr>
+					<tr>
+						<td>合计</td>
+						<td>353600.00</td>
+					</tr>
+				</table>
+            </div>
+		</div>
+	
+		<script src="../../../../resource/js/system/jquery-1.7.2.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+	</body>
+</html>

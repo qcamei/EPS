@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title>采购审批-待办</title>
+		<link rel="stylesheet" type="text/css" href="../../../../resource/bootstrap/bootstrap.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css" />
+		<link rel="stylesheet" href="../../../../resource/css/layer.css" id="layui_layer_skinlayercss" />
+		<link rel="stylesheet" type="text/css" href="../../../../resource/css/style.css"/>
+        <link rel="stylesheet" href="../../../../resource/css/style2.css"/>
+	</head>
+	<body class="tailPage">
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<span class="home-btn"></span>
+			<h1>我的待办</h1>
+		</header>
+		<section class="wapper-1">
+			<div class="nation-base txtList1">
+				<div class="orign">
+				 <ul>
+					<li><p>项目名称：<em>竞争性报价单审批</em></p></li>
+					<li><p>项目编号：<em>HK9890780980kk0lk</em></p></li>
+					<li><p>采购方式：<em>竞争性报价</em></p></li>
+					<li><p>项目分类：<em>货物</em></p></li>
+					<li><p>招标撰写人：<em>张欣</em></p></li>
+					<li><p>询价要求：<em><a class="text-lemon" href="xjyq.html">查看询价要求</a></em></p></li>
+				 </ul>
+				</div>
+				<p class="text-center arrow">
+					<a href="#"><img src="../../../../resource/images/icon_arr_3.png" alt=""></a>
+				</p>	
+			</div>
+			<div class="pink-blank"></div>
+			<div class="style-nation">
+				<ol class="clearfix">
+					<li class="on">内容及附件信息</li>
+					<li>流程记录</li>
+				</ol>
+				<ul>
+					<li class="compreNation on">
+						<div class="link-list">
+							<a class="bjd" href="jzxbjdxx.html"><i></i>竞争性报价单信息</a>
+							<a class="bjd" href="#"><i></i>实施方案修改（文本+附件上传【修改】）</a>
+						</div>
+					</li>
+					
+					<li class="proRecord">
+						<ul>
+							<!--
+							  状态通过类区分：
+							  同意：done  
+							  审批中：doing
+							  退回：back
+                            -->
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path doing">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em></em>-<em></em></p>
+									<p><i>审批环节</i>：<em></em></p>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!--色环加载-->
+	    <div class="loader">
+		    <div class="loaderLayer">
+		        <div class="loader-inner line-spin-fade-loader">
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		        </div>
+		    </div>
+	    </div>
+		<script src="../../../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/angular.min.js"></script>
+    	<script src="../../../../resource/js/system/common.js"></script>
+		<script type="text/javascript">
+			var app = angular.module('myApp', []);
+				iLoadJson.iLoad1=0;//基本信息加载状态
+				iLoadJson.iLoad2=0;//流程记录加载状态
+				iLoadJson.iLoad3=0;//直接提交加载状态
+				iLoadJson.iLoad4=0; //加签待选框加载状态
+				iLoadJson.iLoad5=0;//部门加签加载状态
+				iLoadJson.iLoad6=0;//退回数据加载状态
+
+		</script>
+		<script src="../../../../resource/js/Controller/lxcgctrl.js"></script>
+		<script src="../../../../resource/js/Controller/lcjlctrl.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+		<script src="../../../../resource/bootstrap/bootstrap.min.js"></script>
+		<script src="../../../../resource/js/spCtrl.js"></script>
+		<script src="../../../../resource/js/Controller/tjbmryCtrl.js"></script>		
+		<script src="../../../../resource/js/addDo.js"></script>
+		<script src="../../../../resource/js/system/Sortable.min.js"></script>
+		<script src="../../../../resource/js/dragSort.js"></script>
+		<script src="../../../../resource/js/system/layer.js"></script>
+	</body>
+</html>

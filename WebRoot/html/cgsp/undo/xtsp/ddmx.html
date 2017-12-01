@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"  id="viewport">
+		<!-- uc强制竖屏 -->
+		<meta name="screen-orientation" content="landscape">
+		<!-- QQ强制竖屏 -->
+		<meta name="x5-orientation" content="landscape">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<!-- 适应移动端end -->	
+		<!-- 避免缓存cache -->
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<title></title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css?time=New Date()"/>
+		<link rel="stylesheet" href="../../../../resource/css/style.css?time=New Date()"/>
+		<link rel="stylesheet" href="../../../../resource/css/style2.css?time=New Date()" />
+		<link rel="stylesheet" href="../../../../resource/css/layer.css" id="layui_layer_skinlayercss" />
+		<style>
+			.slide-up-down{border-bottom: 1px solid #fff;}
+			.layui-layer-dialog{max-width: none;width: 84%;}
+			.layui-layer-content{padding:0 20px 20px;}
+			.slide-up-down .bd{display: none;}
+		</style>
+	</head>
+	<body>
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<span class="home-btn"></span>
+			<h1>订单明细</h1>
+		</header>
+		<div id="xjd-wrap" class="second-wrap xjd-wrap" ng-controller="ddxx">
+            <div class="table-s1-box">
+            	<h2 class="bg-orange2 tit-1 text-center">采购订单行信息</h2>
+            	<div class="slide-up-down" ng-repeat="dd in data">
+	            	<h3 class="bg-bh tit-1 hd blue-arr-box">采购订单号:<em ng-bind="dd.ddbh" class="mr-15 text-blue"></em>订单合计:<em ng-bind="dd.ddhj" class="mr-15 text-blue"></em><span class="blue-arr"></span></h3>
+	            	<div class="bd">
+						<table class="table" >
+							<tr class="tr-grey">
+								<td class="bg-gray2">订单行号</td>
+								<td class="bg-gray2">物料号</td>
+								<td class="bg-gray2">物料名称</td>
+								<td class="bg-gray2">订单数量</td>
+								<td class="bg-gray2">含税单价</td>
+								<td class="bg-gray2">工厂号</td>
+								<td class="bg-gray2">工厂名称</td>
+								<td class="bg-gray2">发票净价</td>
+								<td class="bg-gray2">发票价税总额</td>
+								<td class="bg-gray2">税率(%)</td>
+							</tr>
+							<tr ng-repeat="h in dd.ddhxx" ng-class="arrFn(dd.ddhxx)">
+								<td ng-bind="h.ddhh"></td>
+								<td ng-bind="h.wlh"></td>
+								<td ng-bind="h.wlmc"></td>
+								<td ng-bind="h.ddsl"></td>
+								<td ng-bind="h.hsdj"></td>
+								<td ng-bind="h.gch"></td>
+								<td ng-bind="h.gcmc"></td>
+								<td ng-bind="h.fpjj" ng-if="showFn($index,h.bz)" rowspan="{{col($index,h.bz)}}"></td>
+								<td ng-bind="h.fpjsze" ng-if="showFn($index,h.bz)" rowspan="{{col($index,h.bz)}}"></td>
+								<td ng-bind="h.sl" ng-if="showFn($index,h.bz)" rowspan="{{col($index,h.bz)}}"></td>
+							</tr>
+						</table>
+						<table class="table">
+							<tr>
+								<td class="bg-gray2" colspan="3">发票附件</td>
+							</tr>
+							<tr class="tr-grey">
+								<td>序号</td>
+								<td>附件名称</td>
+								<td>发票附件上传时间</td>
+							</tr>
+							<tr ng-repeat="j in dd.fpfj">
+								<td ng-bind="$index+1"></td>
+								<td><a class="text-blue" href="javascript:;" ng-bind="j.fjmc"></a></td>
+								<td ng-bind="j.scsj"></td>
+							</tr>
+						</table>
+						<table class="table">
+							<tr>
+								<td class="bg-gray2" colspan="3">税务信息</td>
+							</tr>
+							<tr class="tr-grey">
+								<td>序号</td>
+								<td>附件名称</td>
+								<td>发票附件上传时间</td>
+							</tr>
+							<tr ng-repeat="j in dd.swxx">
+								<td ng-bind="$index+1"></td>
+								<td><a class="text-blue" href="javascript:;" ng-bind="j.fjmc"></a></td>
+								<td ng-bind="j.scsj"></td>
+							</tr>
+						</table>
+	            	</div>
+            	</div>
+				<div class="bg-orange2 tit-1">合计：<span ng-bind="zhj"></span></div>
+            </div>
+		</div>
+		<!--<div class="spxx-box" style="display:none;height: 200px;border: 1px solid #cc;" >
+			<table class="table mb-15 mt-15">
+				<tr class="bg-orange2">
+					<td colspan="3">发票附件</td>
+				</tr>
+				<tr>
+					<td>序号</td>
+					<td>附件名称</td>
+					<td>上传时间</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>ddd.pdf</td>
+					<td>2016/07/19 18:27</td>
+				</tr>
+			</table>
+			<table class="table">
+				<tr class="bg-orange2">
+					<td colspan="3">税务信息</td>
+				</tr>
+				<tr>
+					<td>序号</td>
+					<td>附件名称</td>
+					<td>上传时间</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>ddd.pdf</td>
+					<td>2016/07/19 18:27</td>
+				</tr>
+			</table>
+		</div>-->
+		<!--色环加载-->
+	    <div class="loader">
+		    <div class="loaderLayer">
+		        <div class="loader-inner line-spin-fade-loader">
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		        </div>
+		    </div>
+	    </div>
+		<script src="../../../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/system/angular.min.js"></script>
+		<script src="../../../../resource/js/system/layer.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+		<script src="../../../../resource/js/system/common.js"></script>
+        <script>  
+			var app=angular.module('myApp',[]);
+			var ywbh = sessionStorage.getItem("ywbh");
+			var	URL=connectPath+'/jsonDataCtrl/showXtspddmx.do?callback=JSON_CALLBACK&xmid='+ywbh;
+			app.controller('ddxx',function($scope,$http){
+				$http.jsonp(URL).success(function(data){
+					console.log(data)
+					$('.loader').hide();
+   					iLoadJson.iLoad0=1;//加载成功
+					$scope.data=data.xtddmx;
+					$scope.zhj=data.zhj;
+					$scope.arrFn=function(arr){
+						$scope.col=function(index,bz){
+							var nC=1;
+							if(bz==0){
+								nC=1;
+								return nC
+							}else if((index==0&&bz==1)||(arr[index-1]&&arr[index-1].bz==0&&bz==1)){
+								for(var i=index+1;i<arr.length;i++){
+									if(arr[i].bz==1){
+										nC++;
+									}else{
+										break;
+									}
+								}
+								console.log(nC)
+								return nC;
+							}
+						};
+						$scope.showFn=function(index,bz){
+							if(bz==0){
+								return true
+							}else if((index==0&&bz==1)||(arr[index-1]&&arr[index-1].bz==0&&bz==1)){
+									return true;
+							}else{
+								return false;
+							}
+						};
+						
+					}
+				$('.xjd-wrap .slide-up-down').eq(0).children('.bd').css("display","block");
+					$('.xjd-wrap .slide-up-down').eq(0).find('.blue-arr').addClass('rotate');
+				})
+			});
+		//判断屏幕横屏
+		function oMobl(){
+		    if(document.documentElement.clientHeight >= document.documentElement.clientWidth){
+		        return "protrait";
+		    }else{
+		        return "landscape";
+		    }
+		}
+		//显示实例提示
+		function oMobx(){
+		    var oMobs = oMobl();
+		    if(oMobs == "protrait" && window.screen.width < 360){
+		    	layer.alert("建议设置设备在横屏模式下查看，或者到更宽设备查看")
+		    	//竖屏或则宽度足够宽了
+		    }else{
+		    	//横屏
+		    }
+		}
+		function oInit(){
+		    oMobx();
+		    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize",function(){
+		        setTimeout(oMobx,200);
+		    })
+		}
+		oInit();   
+		
+		//
+		$(function(){
+			//$('.slide-up-down .bd').css({"display":"none"})
+			$(document).on('click','.slide-up-down .hd',function(){
+				$(this).siblings('.bd').slideToggle(100);
+			});
+			$oBody.on('click','.blue-arr-box',function(e){
+				$(this).find('.blue-arr').toggleClass('rotate');
+				//return false;
+			});
+			//
+			var $spxx=$('.spxx-box');
+			$(document).on('click','.ckspxx',function(){
+				console.log($spxx)
+				layer.open(
+					{
+						type:1,
+						title:["税票信息：","font-weight:800;"],
+						area:['84%','300px'],
+						content:$spxx
+					}
+				)
+			})
+		})
+		</script>
+	</body>
+</html>

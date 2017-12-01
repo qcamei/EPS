@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title>采购审批-待办</title>
+		<link rel="stylesheet" type="text/css" href="../../../../resource/bootstrap/bootstrap.css" />		
+		<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../../../resource/css/layer.css" id="layui_layer_skinlayercss" />
+		<link rel="stylesheet" type="text/css" href="../../../../resource/css/style.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style2.css"/>
+	</head>
+	<body class="tailPage">
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<span class="home-btn"></span>
+			<h1>我的待办</h1>
+		</header>
+		<section class="wapper-1">
+			<div class="nation-base txtList1">
+				<h2 class="text-orange">泰康人寿总公司商务谈判记录</h2>
+				<div class="orign">
+				 <ul>
+					<li><p>项目名称：<em>lsadjfljsf比选</em></p></li>
+					<li><p>流水号：<em>HK9890780980kk0lk</em></p></li>
+					<li><p>谈判时间：<em>2015/10/10至2015/10/12</em></p></li>
+					<li><p>谈判地点：<em>工程</em></p></li>
+					<li><p>谈判甲方：<em>工程</em></p></li>
+					<li><p>谈判乙方：<em>工程</em></p></li>
+					<li><p>甲方谈判人员：<em>工程</em></p></li>
+					<li><p>乙方谈判人员：<em>工程</em></p></li>
+					<li><p>管理责任部门：<em>工程</em></p></li>
+					<li><p>项目负责人：<em>工程</em></p></li>
+					<li><p>最终报价：<em>工程</em></p></li>
+					<li><p>最终定价：<em>工程</em></p></li>
+					<li><p>谈判小组成员：<em>工程</em></p></li>
+					<li><p>主管部门领导：<em>工程</em></p></li>
+					<li class="mb-0"><p>是否由主管部门领导审批：
+							<em>
+								<input class="radio check" type="radio" checked="checked" name="bmld" id="" value="y" /><label>是</label>
+								<input class="radio" type="radio" name="bmld" id="" value="n" /><label>否</label>
+							</em>
+						</p>
+					</li>
+					<li><p>部门分管领导：<em>工程</em></p></li>
+					<li class="mb-0"><p>是否由机构负责人审批：
+							<em>
+								<input class="radio check" type="radio" checked="checked" name="jgfzr" id="" value="y" /><label>是</label>
+								<input class="radio" type="radio" name="jgfzr" id="" value="n" /><label>否</label>
+							</em>
+						</p>
+					</li>
+					<li><p>机构负责人：<em>工程</em></p></li>
+					<li><p>附件：<em><a class="text-lemon" href="">附件-</a><a class="text-lemon" href="">附件2</a></em></p></li>
+				 </ul>
+				</div>
+				<p class="text-center arrow">
+					<a href="#"><img src="../../../../resource/images/icon_arr_3.png" alt=""></a>
+				</p>	
+			</div>
+			<div class="pink-blank"></div>
+			<div class="style-nation">
+				<ol class="clearfix">
+					<li class="on">内容及附件信息</li>
+					<li>流程记录</li>
+				</ol>
+				<ul>
+					<li class="compreNation on">
+						<div class="link-list">
+							<a class="cgwj" href="javascript:;"><i></i>查看谈判记录信息(附件)</a>
+						</div>
+					</li>
+					<li class="proRecord">
+						<ul>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path doing">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em></em>-<em></em></p>
+									<p><i>审批环节</i>：<em></em></p>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<div class="botBtns clearfix">
+			<span id="todo" class="todoBtn"  data-toggle="modal" 
+   data-target="#approval">审  批</span>
+		</div>
+<!------------审批------------>		
+		<div ng-controller="spCtrl">
+<!------------审批意见------------>		
+			<div id="approval" class="approval modal" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="approveBox modal-dialog">
+				<h2 class="spz-tit titSec">审批中<span class="close1" data-dismiss="modal"></span></h2>
+				<div class="formBox">
+					<form>
+						<div class="yn clearfix">
+							<span class="fl">审批意见</span>
+							<div class="sel fr">
+								<p class="checked spyj alignItem">请选择 <em>*</em></p>
+								<div>
+									<p>同意</p>
+									<p>拟同意</p>
+									<p>不同意</p>
+								</div>
+							</div>
+						</div>
+						<div class="mes clearfix">
+							<span class="fl">
+							</span>
+							<textarea  value="" class="fl spnr" name="mes" rows="4" cols="" required txt></textarea>
+						</div>
+						<div class="sub">
+							<button type="submit" class="subTo" data-toggle="modal" data-target="#subNext" ng-click="subNextFn()">提交</button>
+							<button id="addBtn" class="addBtn" data-toggle="modal" data-target="#addPage1" ng-click="dxryFn()">加签提交</button>
+							<button class="backTo" data-toggle="modal" data-target="#toBack" ng-click="toBackFn()" >退回</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			</div>
+<!------------提交------------>	
+			<div id="subNext"  class="sub-next sub-popups modal" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+			 <div class="sub-next-in sub-popups-in">
+					<h2 class="spz-tit titSec">审批中<span class="close1" data-dismiss="modal"></span></h2>
+			 		<form>
+				 	<p class="tit text-orange mb-10">请选择下一环节<em class="text-blue">{{subNetData[0].HJMC}}</em>审核人：</p>
+				 	<table class="table next-app" ng-show="subNet()">
+				 		<tr class="tr-zong">
+				 			<td width="8%" ng-show="show"></td>
+				 			<td width="12%">序号</td>
+				 			<td width="58%">部门</td>
+				 			<td>姓名</td>
+				 		</tr>
+				 		<tr class="option checkRadioBox" ng-repeat="t in subNetData" ng-click="selId($index,t.ID)" ng-class="{trSelected:isSel($index+1)}" >
+				 			<td ng-show="show"><input class="radio" ng-class="{check:isSel($index+1)}" ng-checked="isSel($index+1)" type="radio" name="next" id="" value="aa" /></td>
+				 			<td ng-bind="$index+1"></td>
+				 			<!--<div>{{index=index+1}}</div>-->
+				 			<td>{{t.bm}}</td>
+				 			<td>{{t.SPR}}</td>
+				 		</tr>
+				 		<!--<tr class="option">
+				 			<td><input class="radio" type="radio" name="next" id="" value="bb" ng-show="false"/></td>
+				 			<td>2</td>
+				 			<td>泰康人寿河南分公司中支</td>
+				 			<td>高wa</td>
+				 		</tr>-->
+				 	</table>
+				 	<div class="btns text-center">
+				 		<button class="btn-orange01" ng-click="submitNext()">确认提交</button>
+				 		<button class="btn-orange01 misToNext" data-dismiss="modal">取消</button>
+				 	</div>
+			 		<form>	
+			 </div>
+			</div>
+<!------------退回------------>
+			<div id="toBack" class="sub-popups modal"  tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="sub-popups-in to-back-in">
+				<h2 class="spz-tit titSec">审批中<span class="close1" data-dismiss="modal"></span></h2>
+				<p class="tit text-orange mb-10">任务退回</p>
+				<form action="" method="">
+					<div class="nr txtList1 mb-15">
+						<p class="mb-5">退回环节：<em>{{thhjMc}}（{{thhjSpr}}）</em></p>
+						<p class="clearfix mb-5">
+							<span class="fl">退回提交模式：</span>
+							<span class="fl">
+								<em class="bc-style tr-selected checkRadioBox alignItem" ng-click="backSel0()">
+									<input class="radio check" checked="checked" type="radio" name="bc" id="" value="修改完直接提交给我" />
+									修改完直接提交给我
+								</em>
+								<em class="bc-style checkRadioBox alignItem" ng-click="backSel1()">
+									<input class="radio" type="radio" name="bc" id="" value="修改完重新审批" />修改完重新审批
+								</em>
+							</span>
+						</p>
+					</div>
+				 	<div class="btns text-center">
+				 		<button class="btn-orange01" ng-click="backToSuc()">确认</button>
+				 		<button class="btn-orange01" data-dismiss="modal">取消</button>
+				 	</div>
+				</form>
+			</div>
+			</div>
+		
+<!------------加签------------>
+			<div ng-controller="bmryControl">
+				<div class="addPage modal" id="addPage1" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="bootIn">
+						<header class="main-header">
+							<span class="pre-header2" data-dismiss="modal"></span>
+							<h1>加签</h1>
+							<span class="close1" data-dismiss="modal"></span>
+						</header>
+						<div id="add" class="addBox">
+							<div class="sortStyle">
+								<span class="checkRadioBox" ng-click="bfhjFn1()"><input class="radio check" checked="" type="radio" name="sort" id="sort" value="顺序提交" />顺序提交</span>
+								<span class="checkRadioBox" ng-click="bfhjFn2()"><input class="radio" type="radio" name="sort" id="unsort" value="同时提交"/>同时提交</span>
+							</div>
+							<div class="members-w clearfix">
+								<div class="box fl">
+									<h4>待选：<em>（点击选择）</em></h4>
+									<div class="members membersL">
+										<span id="{{y.VALUE}}" ng-repeat="y in dxryList" ng-click="yxFN()">{{y.NAME}}</span>
+									</div>
+								</div>
+								<div class="box fr">
+									<h4>已选：<em>（点击删除）</em></h4>
+									<div class="members membersR" id="foo">
+									</div>
+								</div>
+							</div>
+							<div class="tjbmr" data-toggle="modal" data-target="#toPart" ng-click="bmTreeFn()" >
+								<span class="plus">+</span><span>本级单位</span>
+							</div>
+							<div class="addSubBtnW btns">
+								<button class="addSubBtn btn-orange01" ng-click="addSubFn()" data-toggle="modal" >确认加签</button>
+								<button class="misAddSubBtn btn-orange01" data-toggle="modal" data-target="#approval" data-dismiss="modal" >取消</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--部门-->
+				<div id="toPart" class="addPage modal" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="bootIn">
+						<div class="fixPart">
+							<header class="addHeader">
+								<span class="pre-header2" data-dismiss="modal"></span>
+								<h1>本级单位</h1>
+								<button class="bmryBtn" data-dismiss="modal">完成</button>
+							</header>
+							<div class="addSeleted">
+								<ul class="clearfix">
+								</ul>
+							</div>
+							<div class="searchBox" id="searchBox">
+								<div class="searchP">
+									<input type="text" placeholder="搜索联系人" id="sslxr" required />
+									<input type="button" class="searchBtn btn" value="搜索" ng-click="search()"/>
+									<!--<input type="button" class="tolistBtn btn" value="部门列表" />-->
+								</div>
+							</div>
+						</div>
+						<div class="addSeletedCopy"></div>
+						<div class="partBox" ng-controller="bmryControl">
+							<div class="lxr-box" style="position:relative;">
+								<ul class="bmlxr-lb" recursion="bmxx">
+								</ul>
+							</div>
+							<div class="shai hrdropdown-box" id="shai" data-hrdropdown = "box">
+								<ul></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!------------------------------加签  结束------------------------------------->		
+		</div>
+<!------------------------------审批部分  结束------------------------------------->		
+		<!--色环加载-->
+	    <div class="loader">
+		    <div class="loaderLayer">
+		        <div class="loader-inner line-spin-fade-loader">
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		        </div>
+		    </div>
+	    </div>
+		<script src="../../../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/angular.min.js"></script>
+    	<script src="../../../../resource/js/system/common.js"></script>
+		<script type="text/javascript">
+			var app = angular.module('myApp', []);
+				iLoadJson.iLoad1=0;//基本信息加载状态
+				iLoadJson.iLoad2=0;//流程记录加载状态
+				iLoadJson.iLoad3=0;//直接提交加载状态
+				iLoadJson.iLoad4=0; //加签待选框加载状态
+				iLoadJson.iLoad5=0;//部门加签加载状态
+				iLoadJson.iLoad6=0;//退回数据加载状态
+
+		</script>
+		<script src="../../../../resource/js/Controller/lxcgctrl.js"></script>
+		<script src="../../../../resource/js/Controller/lcjlctrl.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+		<script src="../../../../resource/bootstrap/bootstrap.min.js"></script>
+		<script src="../../../../resource/js/spCtrl.js"></script>
+		<script src="../../../../resource/js/Controller/tjbmryCtrl.js"></script>		
+		<script src="../../../../resource/js/addDo.js"></script>
+		<script src="../../../../resource/js/system/Sortable.min.js"></script>
+		<script src="../../../../resource/js/dragSort.js"></script>
+		<script src="../../../../resource/js/system/layer.js"></script>
+	</body>
+</html>

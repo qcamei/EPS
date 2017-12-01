@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title>采购审批-待办</title>
+		<link rel="stylesheet" type="text/css" href="../../../../resource/bootstrap/bootstrap.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../../../resource/css/style.css"/>
+        <link rel="stylesheet" href="../../../../resource/css/style2.css"/>
+	</head>
+	<body class="tailPage">
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<span class="home-btn"></span>
+			<h1>我的待办</h1>
+		</header>
+		<section class="wapper-1">
+			<div class="nation-base txtList1">
+				<div class="orign">
+				 <ul>
+					<li><p>项目名称：<em>协同审批流程</em></p></li>
+					<li><p>项目编号：<em>HK9890780980kk0lk</em></p></li>
+					<li><p>采购方式：<em>协同审批</em></p></li>
+					<li><p>项目分类：<em>货物</em></p></li>
+					<li><p>招标撰写人：<em>张欣</em></p></li>
+					<li><p>询价要求：<em><a class="text-lemon" href="xjyq.html">查看询价要求</a></em></p></li>
+				 </ul>
+				</div>
+				<p class="text-center arrow">
+					<a href="#"><img src="../../../../resource/images/icon_arr_3.png" alt=""></a>
+				</p>	
+			</div>
+			<div class="pink-blank"></div>
+			<div class="style-nation">
+				<ol class="clearfix">
+					<li class="on">内容及附件信息</li>
+					<li>流程记录</li>
+				</ol>
+				<ul>
+					<li class="compreNation on">
+						<div class="link-list">
+							<a class="bjd" href="xtdd.html"><i></i>协同订单基本信息</a>
+						</div>
+					</li>
+					
+					<li class="proRecord">
+						<ul>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path done">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em>同意</em>-<em>意见内容</em></p>
+									<p><i>审批环节</i>：<em>2015-10-10</em></p>
+								</div>
+							</li>
+							<li class="path doing">
+								<div class="fig">
+									<div class="line">
+									</div>
+									<span></span>
+								</div>
+								<div class="link txtList1">
+									<p><i>审批环节</i>：<em>谈判小组审批</em></p>
+									<p><i>审批人</i>：<em>张林</em></p>
+									<p><i>审批意见</i>：<em></em>-<em></em></p>
+									<p><i>审批环节</i>：<em></em></p>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<div class="botBtns clearfix">
+			<span id="todo" class="todoBtn"  data-toggle="modal" 
+   data-target="#approval">审  批</span>
+		</div>
+<!------------审批------------>		
+		<div id="approval" class="approval modal fade" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="approveBox modal-dialog">
+				<h2 class="tit titSec">审批中<span class="close1" data-dismiss="modal"></span></h2>
+				<div class="formBox">
+					<form action="">
+						<div class="yn clearfix">
+							<span class="fl">审批意见：</span>
+							<div class="sel fl">
+								<p class="checked">请选择 </p>
+								<div>
+									<p>同意 </p>
+									<p>拟同意 </p>
+								</div>
+							</div>
+						</div>
+						<div class="mes clearfix">
+							<span class="fl">
+								留言：
+							</span>
+							<textarea class="fl" name="mes" rows="4" cols=""></textarea>
+						</div>
+						<div class="sub">
+							<button data-toggle="modal" data-target="#subNext">提交</button>
+							<button id="addBtn" class="addBtn" onclick="window.open('add.html');">加签提交</button>
+							<button data-toggle="modal" data-target="#toBack">退回</button>
+						</div>
+					</form>	
+				</div>
+			</div>
+		</div>
+<!------------修改流程------------>
+		<div id="changeLc" class="sub-popups modal fade"  tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="sub-popups-in change-lc-in">
+				<span class="close close1" data-dismiss="modal">×</span>
+				<p class="tit text-orange mb-10">流程环节列表：</p>
+				<form action="" method="">
+					<table class="table table-s1">
+						<tr class="tr-zong">
+							<td>序号</td>
+							<td>环节名称</td>
+							<td>办理方式</td>
+							<td>办理人员</td>
+							<td>审批状态</td>
+							<td>操作</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>谈判小组审批</td>
+							<td>审核</td>
+							<td>张信息、张佳佳</td>
+							<td>已完成</td>
+							<td></td>
+						</tr>
+						<tr class="doing">
+							<td>2</td>
+							<td>谈判小组审批</td>
+							<td>审核</td>
+							<td>张信息、张佳佳</td>
+							<td>审批中</td>
+							<td><span><i class="glyphicon glyphicon-plus"></i>新增</span><span>删除</span></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>谈判小组审批</td>
+							<td>审核</td>
+							<td>张信息、张佳佳</td>
+							<td>未进行</td>
+							<td><span><i class="glyphicon glyphicon-plus"></i>新增</span><span>删除</span></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		
+<!------------提交------------>	
+		<div id="subNext" class="sub-next sub-popups modal fade" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+			 <div class="sub-next-in sub-popups-in">
+			 	<form action="">
+				 	<p class="tit text-orange mb-10">请选择下一环节<em class="text-blue">部门领导审批</em>审核人：</p>
+				 	<table class="table next-app">
+				 		<tr class="tr-zong">
+				 			<td width="8%"></td>
+				 			<td width="12%">序号</td>
+				 			<td width="58%">部门</td>
+				 			<td>姓名</td>
+				 		</tr>
+				 		<tr class="option tr-selected">
+				 			<td><input class="radio" checked="checked" type="radio" name="next" id="" value="aa" /></td>
+				 			<td>1</td>
+				 			<td>泰康人寿河南分公司中支</td>
+				 			<td>高志玲</td>
+				 		</tr>
+				 		<tr class="option">
+				 			<td><input class="radio" type="radio" name="next" id="" value="bb" /></td>
+				 			<td>2</td>
+				 			<td>泰康人寿河南分公司中支</td>
+				 			<td>高wa</td>
+				 		</tr>
+				 	</table>
+				 	<div class="btns text-center">
+				 		<button class="btn-orange01">确认提交</button>
+				 		<button class="btn-orange01">取消</button>
+				 	</div>
+			 	</form>			
+			 </div>
+		</div>
+<!------------退回------------>
+		<div id="toBack" class="sub-popups modal fade"  tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="sub-popups-in to-back-in">
+				<p class="tit text-orange mb-10">任务退回：</p>
+				<form action="" method="">
+					<div class="nr txtList1 mb-15">
+						<p class="mb-5">退回环节：<em>经办人起草（贾俊玲）</em></p>
+						<p class="clearfix mb-5">
+							<span class="fl">退回提交模式：</span>
+							<span class="fl">
+								<em class="bc-style tr-selected">
+									<input class="radio" checked="checked" type="radio" name="bc" id="" value="修改完直接提交给我" />
+									修改完直接提交给我
+								</em><br>
+								<em class="bc-style">
+									<input class="radio" type="radio" name="bc" id="" value="修改完重新审批" />修改完重新审批
+								</em>
+							</span>
+						</p>
+					</div>
+				 	<div class="btns text-center">
+				 		<button class="btn-orange01">确认</button>
+				 		<button class="btn-orange01">取消</button>
+				 	</div>
+				</form>
+			</div>
+		</div>
+
+	 	<script src="../../../../resource/js/system/jquery-1.7.2.min.js"></script>
+	 	<script src="../../../../resource/js/system/fastclick.js"></script>
+	 	<script src="../../../../resource/js/publicDo.js"></script>
+	 	<script src="../../../../resource/bootstrap/bootstrap.min.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,138 @@
+1./***********************文件名说明***********************/
+	cgwjsp-采购文件审批流程
+	cgggsp-采购公告审批
+	jgggsp-结果公告审批
+	tpjlsp-询比价谈判记录审批/单一来源谈判记录审批流程
+	lxcg-零星采购内容审批
+	zzcgwjbp-中支采购文件报批流程
+	ddbz-订单编制
+	htzfsq-合同支付申请
+	itsbsqdd-IT设备申请订单业务流程审批
+	itsbsqgysbj-IT设备申请供应商报价审批流程
+	dylytpjl-单一来源谈判记录审批流程
+	hycg-会议采购
+	jzbjdsp-竞争报价单审批
+	dzjjcg-电子竞价采购审批
+	xtsp-协同审批流程
+	htbzsplc 合同编制审批流程
+		
+/*******************此部分内容过期*******************/
+2.table表格内容溢出处理：
+	1.table添加类ellipTable
+	2.在该table的<col />列标签设置固定宽度
+	3.调用publicDo.js 里的ellip函数--ellip();
+	4.单独控制该table从第几行开始做溢出处理。（标题类内容尽量不溢出）
+	.fyTable tr:nth-child(n+5) td.ellip{white-space:nowrap;text-overflow: ellipsis;overflow: hidden;}
+
+3.个别script标签测试：
+	fastclick测试点击延迟解决，在undolist.html文件里引入了fastclick.js
+	在publicDo.js  $()内首行添加FastClick.attach(document.body);
+	
+/*************************************************/
+
+4.本项目统一使用Jquery2.0版本
+5.审批弹窗功能实现使用bootstrap实现
+6.加载相关弹出层提示使用layer框架
+7.table表格内容溢出处理：(新)
+	参照“会议费用明细hyfymx.html”关联的css,js.
+	注意:1.类ellipTable添加
+	2.确定执行函数ellip()的时间：DOM元素及数据完全遍历并显示完毕。
+	3.需要溢出隐藏的td格式：<td><em><span>{{n.nr}}</span><i>...</i></em></td>
+	
+8./*******************加载中提示相关说明：*****************/
+	(1)
+	一：设置为加载中时，页面不得进行任何操作（全屏透明遮罩层）。主要用于可提交的页面等
+		<div class="loader">
+			<div class="loaderLayer">
+				<div class="loader-inner ball-pulse">
+				  <div></div>
+				  <div></div>
+				  <div></div>
+				</div>
+			</div>
+		</div>
+	二：设置为加载中时，页面可以进行其它操作。应用在主功能页面index,在途列表页面apList.html，待办列表页面undoList.html
+		<div class="loader loaderLayer" style="bottom: auto;">
+			<div class="loader-inner ball-pulse">
+			  <div></div>
+			  <div></div>
+			  <div></div>
+			</div>
+		</div>
+	(2)控制页面默认刷新后loading层的显示和隐藏：当所需加载的数据全部加载成功后隐藏
+			本项目默认刷新后最多加载以下6条数据，加载成功之前为0，加载成功后或不需要加载则为1.当全部为1后则loading隐藏
+			
+			例子：待办某项目详情页，默认需要加载6条
+			window.iLoadJson={
+				iLoad1:0,//基本信息加载状态
+				iLoad2:0,//流程记录加载状态
+				iLoad3:0,//直接提交加载状态
+				iLoad4:0, //加签待选框加载状态
+				iLoad5:0,//部门加签加载状态
+				iLoad6:0//退回数据加载状态
+			};
+
+			例子：待办某项目详情页，默认需要加载2条.其它不需要加载则直接设置为1.
+			window.iLoadJson={
+				iLoad1:0,//基本信息加载状态
+				iLoad2:0,//流程记录加载状态
+				iLoad3:1,//直接提交加载状态
+				iLoad4:1, //加签待选框加载状态
+				iLoad5:1,//部门加签加载状态
+				iLoad6:1//退回数据加载状态
+			};
+/*********************************************************/	
+
+angularJs 引用1.2.8版本的。否则，遍历index时，数据不会一条条随着index显示
+
+/*******************************************************/
+处理后边文件备注：
+1.分支主页面：
+	a.header信息一样
+	b.审批模块复制,loader一样
+	c.js文件14个一样，外再创建一个独立的基本信息接口文件处理js.
+		<script src="../../../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/angular.min.js"></script>
+    	<script src="../../../../resource/js/system/common.js"></script>
+		<script type="text/javascript">
+			var app = angular.module('myApp', []);
+				iLoadJson.iLoad1=0;//基本信息加载状态
+				iLoadJson.iLoad2=0;//流程记录加载状态
+				iLoadJson.iLoad3=0;//直接提交加载状态
+				iLoadJson.iLoad4=0; //加签待选框加载状态
+				iLoadJson.iLoad5=0;//部门加签加载状态
+				iLoadJson.iLoad6=0;//退回数据加载状态
+
+		</script>
+		<script src="../../../../resource/js/Controller/lcjlctrl.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+		<script src="../../../../resource/bootstrap/bootstrap.min.js"></script>
+		<script src="../../../../resource/js/spCtrl.js"></script>
+		<script src="../../../../resource/js/Controller/tjbmryCtrl.js"></script>		
+		<script src="../../../../resource/js/addDo.js"></script>
+		<script src="../../../../resource/js/system/Sortable.min.js"></script>
+		<script src="../../../../resource/js/dragSort.js"></script>
+		<script src="../../../../resource/js/system/layer.js"></script>
+	d.内容及附件信息一样（只需改动里边的附件页面name及路径地址）
+	e.如果有附件，附件数据格式按照零星采购，处理方法也按照零星采购，数据解析成功后调用fjFn()方法，并记得引入fujian.js
+2.子页面后续处理
+	a.header同原子页面一样
+	b.
+	
+//----------------------------------合同办理
+合同办理注意点：采购类别：IT/非IT，费用付款类型：金额/百分比
+
+
+//"lx":"0" 普通键值对  "1" 普通键值对，超链接  "2"附件. 代码如下，以合同编制基本信息为例
+
+<div class="orign" style="opacity: 0;">
+	<ul>
+		<li ng-repeat="x in data.jbxx" ng-class="lastIndex($index)">
+			<p>{{x.mc}}：
+				<em ng-if="x.lx==0">{{x.nr}}</em>
+				<a ng-if="x.lx==1" href="{{x.href}}" class="text-under text-blue">{{x.nr}}</a>
+			</p>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style.css"/>
+
+	</head>
+	<body class="bg-white">
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<span class="home-btn"></span>
+			<h1>协同订单基本信息</h1>
+		</header>
+		<div id="xjd-wrap" class="second-wrap xjd-wrap">
+			<div class="xjd-bd" style="left:0">
+                    <div class="table-s1-box">
+						<table class="table table-s1" >
+							<tr class="tr-zong">
+								<td colspan="6" class="text-left pl-10">采购订单信息</td>
+							</tr>
+							<tr class="tr-grey">
+								<td>序号</td>
+								<td>供应商名称</td>
+								<td>采购订单号</td>
+								<td>订单创建日期</td>
+								<td>供应商申请日期</td>
+								<td>操作</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>博雅软件技术有限公司</td>
+								<td>12345678</td>
+								<td>2015/12/11</td>
+								<td>2015/12/12</td>
+								<td><a class="text-zong" href="ddmx.html">订单明细</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>博雅软件技术有限公司</td>
+								<td>12345678</td>
+								<td>2015/12/11</td>
+								<td>2015/12/12</td>
+								<td><a class="text-zong" href="ddmx.html">订单明细</a></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>博雅软件技术有限公司</td>
+								<td>12345678</td>
+								<td>2015/12/11</td>
+								<td>2015/12/12</td>
+								<td><a class="text-zong" href="ddmx.html">订单明细</a></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>博雅软件技术有限公司</td>
+								<td>12345678</td>
+								<td>2015/12/11</td>
+								<td>2015/12/12</td>
+								<td><a class="text-zong" href="ddmx.html">订单明细</a></td>
+							</tr>
+						</table>
+                    </div>
+			</div>
+		</div>
+	
+		<script src="../../../../resource/js/system/jquery-1.7.2.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+// 		<script>
+// 			$(function(){
+// 				$('.xjd-hd li').bind('touchstart',function(){
+// 					var $thisIndex=$(this).index();
+// 					$(this).addClass('on').siblings().removeClass('on');
+// 					$('.xjd-bd li').eq($thisIndex).show().siblings().hide();
+// 				});
+				
+// 				var onOff=0;
+// 				var $xjdBd=$('.xjd-bd');
+// 				var maxLeft=$xjdBd.position().left;//获取原始left;
+				
+// 				$(document).on('touchmove',function(ev){
+// 					ev.preventDefault();
+// 				});
+// 				moveScroll();
+// 				function moveScroll(){
+// 					$xjdBd.on('touchstart',function(ev){
+// 						onOff=1;
+
+// 						var touch = ev.originalEvent.changedTouches ? ev.originalEvent.changedTouches[0] : ev;
+// 						var downX=touch.pageX;//获取按下的坐标X
+// 						var $this=$(this);
+// 						var downLeft=$this.position().left;//获取原始left;
+// 						var disX=downX-downLeft;//触发位置与原始left之间的间距
+// 						$(document).on('touchmove.move',function(ev){
+// //							if(!onOff){
+// //								return;
+// //							}
+// //							onOff=0;
+// 							console.log(onOff)							
+// 							var touch = ev.originalEvent.changedTouches ? ev.originalEvent.changedTouches[0] : ev;
+// 							var newX=touch.pageX;//移动过程中获取坐标X
+// 							var moveX=downX-newX;//移动的距离
+// 							var newLeft=newX-disX;
+// 							if(newLeft<=0){
+// 								newLeft=0;
+// 								$this.css('left',newLeft+'px')
+// 							}else if(newLeft>=maxLeft){
+// 								newLeft=maxLeft;
+// 								$this.css('left',newLeft+'px')
+// 							}else{
+// 								$this.css('left',newLeft+'px')
+// 							}
+// 							//console.log(newX)
+// 							return false;
+// 						})
+// 						$(document).on('touchend.move',function(){
+// 							$this.off('.move');
+// 							//return false;
+// 						});
+// 						return false;
+// 					});
+// 				}
+				
+// 			});
+// 		</script>
+	</body>
+</html>

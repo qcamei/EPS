@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style2.css"/>
+	</head>
+	<body class="secPage itsbsqdd-cgxq">
+		<header class="SecHeader titSec">
+			<h1>采购需求</h1>
+			<span class="pre-header close1"></span>
+		</header>
+		<div class="second-wrap slide-lr">
+			<div class="slide-lr-hd">
+				<ol>
+					<li class="on">1</li>
+					<li>2</li>
+				</ol>
+			</div>
+			<div class="slide-lr-bd">
+				<ul>
+					<li>
+						<div class="txtList1">
+							<p>申请编号：<em>98908098</em></p>
+							<p>物料组：<em>98908098</em></p>
+							<p>工厂：<em>泰康人寿广东分公司</em></p>
+							<p>工厂号：<em>1300</em></p>
+							<p>项目：<em>98908098</em></p>
+							<p>物科：<em>98908098</em></p>
+							<p>短文本：<em>3600-F5防火墙</em></p>
+							<p>数量：<em>3600-F5防火墙</em></p>
+							<p>配置信息补充：<em>3600-F5防火墙</em></p>
+							<p>抽取时间：<em>2015/10/10</em></p>
+							<p>SAP状态：<em>正常</em></p>
+						</div>
+					</li>
+					<li>
+						<div class="txtList1">
+							<p>申请编号：<em>666666666</em></p>
+							<p>物料组：<em>98908098</em></p>
+							<p>工厂：<em>泰康人寿广东分公司</em></p>
+							<p>工厂号：<em>1300</em></p>
+							<p>项目：<em>98908098</em></p>
+							<p>物科：<em>98908098</em></p>
+							<p>短文本：<em>3600-F5防火墙</em></p>
+							<p>数量：<em>3600-F5防火墙</em></p>
+							<p>配置信息补充：<em>3600-F5防火墙</em></p>
+							<p>抽取时间：<em>2015/10/10</em></p>
+							<p>SAP状态：<em>正常</em></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<script src="../../../../resource/js/system/jquery-1.7.2.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+ 		<script>
+		 	//左侧滑动菜单
+			$(function(){
+				$('.slide-lr-hd li').bind('touchstart',function(){
+					var $thisIndex=$(this).index();
+					$(this).addClass('on').siblings().removeClass('on');
+					$('.slide-lr-bd>ul>li').eq($thisIndex).show().siblings().hide();
+				});
+				var t=1;
+				var transLeft=$('.slide-lr-bd').position().left;
+				console.log(transLeft)
+				$('.slide-lr-bd').bind('click',function(){
+					//alert('0')
+					var $this=$(this);
+					$this.css('transition','.2s ease');
+					if(t){
+						t=0;
+						$this.css('transform','translate3d(-'+transLeft+'px,0,0)');   	
+					}else{
+						t=1;
+						$this.css('transform','translate3d(0,0,0)');   	
+					}
+		
+				});
+			});
+ 		
+ 		</script>
+	</body>
+</html>

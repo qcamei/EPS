@@ -1,0 +1,84 @@
+body{background: #fff;overflow-x:hidden;overflow-y:hidden;}
+.index-page-con{position: fixed;z-index:1;height:100%;width:100%;top: 4.2rem;overflow: scroll;}
+.top-txt{padding: 3rem 0;text-align: center;background: #f9f9f9;}
+.top-txt img{width: 60%;}
+.num-new{display:none;position: absolute;background:#f00;width: 20px;height: 20px;font-size: 12px;color: #fff; border-radius: 50%;text-align: center;line-height: 20px;-webkit-transform: scale(0.8);}		
+.swiper-slide-active {
+}
+.mainSlideBox .hd{ position:relative;height:6rem;border-top: 1px solid #ffd600;border-bottom: 1px solid #ffd600;background: #fff; overflow: hidden;}
+.mainSlideBox .hd ol{ position:relative;height:100%;text-align: left;}
+.mainSlideBox .hd li{ border-radius:0; opacity:1;padding: 1.6rem 0 0; width:25%;height:100%;background:none;text-align: center;font-size:1.3rem;color: #3c3c3c;border-right: 1px solid #ffd600;}
+.mainSlideBox .hd li.swiper-pagination-bullet-active{background:#ffd600;color: #fff;}
+.mainSlideBox .hd li span{position:relative;display:inline-block;width:1.5rem ;height:1.5rem;}
+.mainSlideBox .hd li span .num-new{right:-1.5rem;top:-1rem;}
+.mainSlideBox .hd li:first-child span{background:url(../images/m_sp.png) no-repeat center top; background-size:100% auto;}
+.mainSlideBox .hd li:nth-child(2) span{background:url(../images/m_pb1.png) no-repeat center top;background-size:100% auto;}
+.mainSlideBox .hd li:nth-child(3) span{background:url(../images/m_pb.png) no-repeat center top;background-size:100% auto;}
+.mainSlideBox .hd li.swiper-pagination-bullet-active span{background-position: center 100%;}
+
+.mainSlideBox .bd{background: #fff; overflow: hidden;padding-bottom: 45px;}
+.mainSlideBox .bd>ul>li{background: #fff;}
+.mainSlideBox .bd .in li{position:relative;overflow:hidden;font-size:1.4rem;color: #676767;display:-webkit-flex;display:flex;-webkit-align-items: center;
+align-items: center;line-height: 2;}
+.mainSlideBox .bd .list li{padding:2rem 4%;border-bottom:1.5px solid #f2f2f2;line-height: 100%;} 
+.mainSlideBox .bd .list li li *{vertical-align: middle;}
+.mainSlideBox .bd .smwd.in{padding:20px 0;}
+.mainSlideBox .bd .smwd p{padding:1rem 4%; border-bottom:1px solid #f2f2f2; font-size: 1.4rem;color: #3e3e3e;line-height: 2rem;}
+.mainSlideBox .bd .smwd a{color: #ff820b;text-decoration: underline;} 
+.bd .in li i{float:left;width:24px; height: 24px;margin-right:8px;background:url(../images/ic_03_1.png) no-repeat 0 1px; background-size: 24px auto;}
+.sp-menu li:nth-child(1) i{background:url(../images/ic_03_2.png) no-repeat 0 2px; background-size: 19px auto;}
+.sp-menu li:nth-child(2) i{background:url(../images/ic_03_2.png) no-repeat 0 -50px; background-size: 19px auto;}
+.bd .pb .in li i{background:url(../images/ic_pb_01.png) no-repeat 0 1px; background-size: 19px auto;}
+.bd .pb .in li:nth-child(2) i{background:url(../images/ic_pb_01.png) no-repeat 0 -50px; background-size: 19px auto;}
+.bd .pb .in li:nth-child(2) em{display: none !important;}
+
+.bd>ul>li .in li .num-new{margin-top: -10px;}
+/*mainSlideBox§†*/
+.mainSlideBox .swiper-container{
+	width:100%;	
+-webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+}
+
+/*mainSlideBox swiper-slide¦»*/
+.mainSlideBox .swiper-slide .in{
+	min-height: 10rem;
+	 -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+/*.swiper-slide:first-child{background: #fef8f0;}
+.swiper-slide:nth-child(2){background: #fffbeb;}
+.swiper-slide:last-child{background: #defede;}*/
+
+.swiper-slide-active {}
+#pagination .swiper-pagination-bullet{
+	width:25%;
+	height:auto;
+	float:left;
+	background:none;
+	opacity: 1;
+	border: 1px solid #eee;
+}
+#pagination .swiper-pagination-bullet-active{
+	background:#eb7a0c;
+}
+/*.mainSlideBox .swiper-wrapper .swiper-slide:nth-child(2){transform:perspective(600px) translate3d(0px, 0px, -269.928px);}
+*/
+/*banner-swiper*/
+.index-banner {
+	margin: 1rem 0;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.index-banner ul li{width: 100% !important;height:13rem !important;margin:0;padding:0;text-align: center;}
+
+
+.index-banner ul li img {
+	width: 100%;
+	height:100%;
+	margin: 0;
+}

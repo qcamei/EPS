@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html ng-app="myApp" >
+	<head>
+		<meta charset="GBK">
+		<meta content="width=device-width" name="viewport"  id="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<link rel="stylesheet" href="../../../../resource/css/common.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/style2.css"/>
+		<link rel="stylesheet" href="../../../../resource/css/layer.css" id="layui_layer_skinlayercss" />
+	</head>
+	<body class="secPage htzf-htfkxx">
+		<header class="main-header">
+			<span class="pre-header"></span>
+			<span class="home-btn"></span>
+			<h1>合同付款信息</h1>
+		</header>
+		<div class="second-wrap htfkxx" ng-controller="htfkxx">
+			<div class="tabBox tabBox01">
+				<ol class="hd clearfix mb-15">
+					<li class="fl on">合同基础信息</li>
+					<li class="fl">本次付款信息</li>
+				</ol>
+				<ul class="bd">
+					<li>
+						<table class="table table-s2">
+							<tr class="tr-zong">
+								<td colspan="2">合同基本信息</td>
+							</tr>
+							<tr>
+								<td width="30%">合同编号</td>
+								<td ng-bind="htjbxx.htbh"></td>
+							</tr>
+							<tr>
+								<td width="30%">合同名称</td>
+								<td ng-bind="htjbxx.htmc"></td>
+							</tr>
+							<tr>
+								<td width="30%">合同性质</td>
+								<td ng-bind="htjbxx.htxz"></td>
+							</tr>
+							<tr>
+								<td width="30%">乙方</td>
+								<td ng-bind="htjbxx.yf"></td>
+							</tr>
+							<tr>
+								<td width="30%">是否第三方收款</td>
+								<td ng-bind="htjbxx.sfdsfsk"></td>
+							</tr>
+							<tr>
+								<td width="30%">收款单位全称</td>
+								<td ng-bind="htjbxx.skdwmc"></td>
+							</tr>
+							<tr>
+								<td width="30%">开户行</td>
+								<td ng-bind="htjbxx.khh"></td>
+							</tr>
+							<tr>
+								<td width="30%">帐号</td>
+								<td ng-bind="htjbxx.zh"></td>
+							</tr>
+							<tr>
+								<td width="30%">合同金额(人民币)</td>
+								<td ng-bind="htjbxx.htje"></td>
+							</tr>
+							<tr>
+								<td width="30%">合同文本</td>
+								<td ng-bind="htjbxx.htwb"></td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						<table class="table table-s2">
+							<tr class="tr-zong">
+								<td colspan="2">本次付款信息</td>
+							</tr>
+							<tr>
+								<td width="30%">类别</td>
+								<td ng-bind="bcfkxx.lb"></td>
+							</tr>
+							<tr>
+								<td>付款条件</td>
+								<td ng-bind="bcfkxx.fktj"></td>
+							</tr>
+							<tr>
+								<td>付款时间</td>
+								<td ng-bind="bcfkxx.fksj"></td>
+							</tr>
+							<tr>
+								<td>付款比例</td>
+								<td ng-bind="bcfkxx.fkbl"></td>
+							</tr>
+							<tr>
+								<td>合同约定本次付款金额(元)</td>
+								<td ng-bind="bcfkxx.fkje"></td>
+							</tr>
+							<tr>
+								<td>付款状态</td>
+								<td ng-bind="bcfkxx.fkzt"></td>
+							</tr>
+							<tr>
+								<td ng-bind="htjbxx.fkbt"></td>
+								<td ng-bind="bcfkxx.ljfk"></td>
+							</tr>
+							<tr>
+								<td>付款说明</td>
+								<td ng-bind="bcfkxx.fksm"></td>
+							</tr>
+							<tr>
+								<td>备注</td>
+								<td ng-bind="bcfkxx.bz"></td>
+							</tr>
+						</table>
+					</li>
+				</ul>
+			</div>
+		</div>		
+		<!--色环加载-->
+	    <div class="loader">
+		    <div class="loaderLayer">
+		        <div class="loader-inner line-spin-fade-loader">
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		        </div>
+		    </div>
+	    </div>
+		<script src="../../../../resource/js/system/jquery-2.2.0.min.js"></script>
+		<script src="../../../../resource/js/system/fastclick.js"></script>
+		<script src="../../../../resource/js/angular.min.js"></script>
+		<script src="../../../../resource/js/system/layer.js"></script>
+    	<script src="../../../../resource/js/system/common.js"></script>
+		<script src="../../../../resource/js/publicDo.js"></script>
+		<script type="text/javascript">
+			var app = angular.module('myApp', []);
+			var ywbh = sessionStorage.getItem("ywbh");
+			var sxh=sessionStorage.getItem("sxh");
+			URL=connectPath+'/jsonDataCtrl/showHtfkxx.do?callback=JSON_CALLBACK&xmid='+ywbh+'&sxh='+sxh;
+			app.controller('htfkxx',function($scope,$http){
+				$http.jsonp(URL).success(function(data){
+					$('.loader').hide();
+   					iLoadJson.iLoad0=1;//加载成功
+					$scope.data=data;
+					$scope.bcfkxx=$scope.data.bcfkxx;
+					$scope.htjbxx=$scope.data.htjbxx;
+					//alert($scope.htjbxx.fkbt)
+					console.log(data)
+				}).error(function(){
+					$('.loader').hide();
+					layer.alert("加载出错啦")
+				});
+			})
+			$('.loader').hide();
+			tabFn();//选项卡切换
+		</script>
+
+	</body>
+</html>
